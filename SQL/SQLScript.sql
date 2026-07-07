@@ -249,7 +249,7 @@ SELECT *
 FROM clean_transactions;
 
 /* 
-Revenue & refund leakage — What's net revenue by month, and which merchant categories have the highest refund-to-purchase ratio?
+Revenue & refund leakage — What's net revenue by month and the total revenue vs refund of merchant categories
 Customer segmentation — Which customers are high-value vs. dormant (RFM: recency, frequency, monetary), and does signup cohort predict transaction volume?
 Fraud pattern detection — What transaction characteristics (amount size, payment method, country) correlate with flagged fraud, once fraud_flag is standardized?
 Payment method & channel trends — How has e-wallet usage shifted vs. cards/bank transfer over time, and does it vary by country?
@@ -257,7 +257,7 @@ Data quality / reconciliation audit — Quantify the messiness: % missing per co
 */
 
 -- 1. Revenue to Refund ratio
--- What's net revenue by month, and which merchant categories have the highest refund-to-purchase ratio?
+-- What's net revenue by month and the total revenue vs refund of merchant categories
 -- Separate total revenue and refunds based on sums of negative amount and positive
 SELECT DISTINCT merchant_category
 FROM clean_transactions_php;
@@ -265,14 +265,26 @@ FROM clean_transactions_php;
 SELECT
 	transaction_month,
     transaction_year,
-    merchant_category,
+	merchant_category,
 	ROUND(SUM(CASE WHEN amount_php > 0 THEN amount_php ELSE 0 END), 2) as Total_Revenue,
-	ROUND(ABS(SUM(CASE WHEN amount_php < 0 THEN amount_php ELSE 0 END)), 2) as Total_Refunds,
-	ROUND(ABS(SUM(CASE WHEN amount_php < 0 THEN amount_php ELSE 0 END)) / NULLIF(SUM(CASE WHEN amount_php > 0 THEN amount_php ELSE 0 END), 0), 4) AS refund_ratio
+	ROUND(ABS(SUM(CASE WHEN amount_php < 0 THEN amount_php ELSE 0 END)), 2) as Total_Refunds
 FROM clean_transactions_php
 GROUP BY transaction_month, transaction_year, merchant_category
 ORDER BY transaction_year ASC, transaction_month ASC;
 -- Adjusted based on changes in currency of PHP and sorted in ascending order based on month and year
+
+SELECT
+    merchant_category,
+    ROUND(SUM(CASE WHEN amount_php > 0 THEN amount_php ELSE 0 END), 2) AS Total_Revenue,
+    ROUND(ABS(SUM(CASE WHEN amount_php < 0 THEN amount_php ELSE 0 END)), 2) AS Total_Refunds,
+    ROUND(
+        ABS(SUM(CASE WHEN amount_php < 0 THEN amount_php ELSE 0 END)) 
+        / NULLIF(SUM(CASE WHEN amount_php > 0 THEN amount_php ELSE 0 END), 0), 
+        4
+    ) AS refund_ratio
+FROM clean_transactions_php
+GROUP BY merchant_category
+ORDER BY refund_ratio DESC;
 
 -- 2. Customer Segmentation
 -- Which customers are high-value vs. dormant (RFM: recency, frequency, monetary), and does signup cohort predict transaction volume?
@@ -441,3 +453,16 @@ SELECT
 FROM clean_transactions_php
 WHERE amount_php > (SELECT AVG(amount_php) + 3 * STDDEV(amount_php) FROM clean_transactions_php)
    OR amount_php < (SELECT AVG(amount_php) - 3 * STDDEV(amount_php) FROM clean_transactions_php);
+   
+UPDATE clean_transactions_php
+SET merchant_category =
+CASE WHEN merchant_category IN ('Dining', 'dining') THEN 'Dining' ELSE merchant_category END WHERE merchant_category IN ('Dining', 'dining');
+
+SET SQL_SAFE_UPDATES = 0;
+
+SELECT 
+    COUNT(*) AS total_rows,
+    ROUND(AVG(amount_php), 2) AS avg_amount,
+    ROUND(SUM(amount_php), 2) AS total_sum
+FROM clean_transactions_php;
+

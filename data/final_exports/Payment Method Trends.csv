@@ -1,0 +1,211 @@
+transaction_year,transaction_month,payment_channel,"Total Transaction"
+2023,1,"Bank Transfer",23
+2023,1,Card,59
+2023,1,Cash,22
+2023,1,E-Wallet,46
+2023,1,Unknown,13
+2023,2,"Bank Transfer",11
+2023,2,Card,46
+2023,2,Cash,18
+2023,2,E-Wallet,36
+2023,2,Unknown,10
+2023,3,"Bank Transfer",14
+2023,3,Card,53
+2023,3,Cash,31
+2023,3,E-Wallet,36
+2023,3,Unknown,19
+2023,4,"Bank Transfer",15
+2023,4,Card,58
+2023,4,Cash,19
+2023,4,E-Wallet,43
+2023,4,Unknown,10
+2023,5,"Bank Transfer",16
+2023,5,Card,60
+2023,5,Cash,31
+2023,5,E-Wallet,35
+2023,5,Unknown,19
+2023,6,"Bank Transfer",15
+2023,6,Card,54
+2023,6,Cash,31
+2023,6,E-Wallet,43
+2023,6,Unknown,6
+2023,7,"Bank Transfer",13
+2023,7,Card,58
+2023,7,Cash,28
+2023,7,E-Wallet,41
+2023,7,Unknown,11
+2023,8,"Bank Transfer",15
+2023,8,Card,51
+2023,8,Cash,29
+2023,8,E-Wallet,34
+2023,8,Unknown,13
+2023,9,"Bank Transfer",13
+2023,9,Card,49
+2023,9,Cash,23
+2023,9,E-Wallet,33
+2023,9,Unknown,21
+2023,10,"Bank Transfer",15
+2023,10,Card,69
+2023,10,Cash,34
+2023,10,E-Wallet,33
+2023,10,Unknown,17
+2023,11,"Bank Transfer",6
+2023,11,Card,46
+2023,11,Cash,23
+2023,11,E-Wallet,42
+2023,11,Unknown,14
+2023,12,"Bank Transfer",12
+2023,12,Card,51
+2023,12,Cash,32
+2023,12,E-Wallet,31
+2023,12,Unknown,9
+2024,1,"Bank Transfer",13
+2024,1,Card,56
+2024,1,Cash,21
+2024,1,E-Wallet,41
+2024,1,Unknown,10
+2024,2,"Bank Transfer",14
+2024,2,Card,55
+2024,2,Cash,23
+2024,2,E-Wallet,40
+2024,2,Unknown,8
+2024,3,"Bank Transfer",11
+2024,3,Card,50
+2024,3,Cash,34
+2024,3,E-Wallet,49
+2024,3,Unknown,22
+2024,4,"Bank Transfer",7
+2024,4,Card,47
+2024,4,Cash,24
+2024,4,E-Wallet,36
+2024,4,Unknown,11
+2024,5,"Bank Transfer",12
+2024,5,Card,49
+2024,5,Cash,23
+2024,5,E-Wallet,37
+2024,5,Unknown,10
+2024,6,"Bank Transfer",14
+2024,6,Card,65
+2024,6,Cash,32
+2024,6,E-Wallet,41
+2024,6,Unknown,14
+2024,7,"Bank Transfer",8
+2024,7,Card,55
+2024,7,Cash,21
+2024,7,E-Wallet,48
+2024,7,Unknown,15
+2024,8,"Bank Transfer",12
+2024,8,Card,52
+2024,8,Cash,28
+2024,8,E-Wallet,30
+2024,8,Unknown,7
+2024,9,"Bank Transfer",11
+2024,9,Card,55
+2024,9,Cash,21
+2024,9,E-Wallet,32
+2024,9,Unknown,14
+2024,10,"Bank Transfer",8
+2024,10,Card,52
+2024,10,Cash,15
+2024,10,E-Wallet,44
+2024,10,Unknown,7
+2024,11,"Bank Transfer",16
+2024,11,Card,47
+2024,11,Cash,18
+2024,11,E-Wallet,23
+2024,11,Unknown,12
+2024,12,"Bank Transfer",15
+2024,12,Card,44
+2024,12,Cash,30
+2024,12,E-Wallet,39
+2024,12,Unknown,16
+2025,1,"Bank Transfer",6
+2025,1,Card,55
+2025,1,Cash,20
+2025,1,E-Wallet,51
+2025,1,Unknown,9
+2025,2,"Bank Transfer",14
+2025,2,Card,40
+2025,2,Cash,23
+2025,2,E-Wallet,30
+2025,2,Unknown,13
+2025,3,"Bank Transfer",10
+2025,3,Card,57
+2025,3,Cash,16
+2025,3,E-Wallet,39
+2025,3,Unknown,8
+2025,4,"Bank Transfer",11
+2025,4,Card,62
+2025,4,Cash,18
+2025,4,E-Wallet,42
+2025,4,Unknown,14
+2025,5,"Bank Transfer",15
+2025,5,Card,51
+2025,5,Cash,23
+2025,5,E-Wallet,42
+2025,5,Unknown,19
+2025,6,"Bank Transfer",16
+2025,6,Card,52
+2025,6,Cash,30
+2025,6,E-Wallet,45
+2025,6,Unknown,12
+2025,7,"Bank Transfer",14
+2025,7,Card,61
+2025,7,Cash,22
+2025,7,E-Wallet,42
+2025,7,Unknown,11
+2025,8,"Bank Transfer",22
+2025,8,Card,55
+2025,8,Cash,24
+2025,8,E-Wallet,42
+2025,8,Unknown,20
+2025,9,"Bank Transfer",12
+2025,9,Card,50
+2025,9,Cash,20
+2025,9,E-Wallet,30
+2025,9,Unknown,7
+2025,10,"Bank Transfer",8
+2025,10,Card,59
+2025,10,Cash,19
+2025,10,E-Wallet,40
+2025,10,Unknown,7
+2025,11,"Bank Transfer",20
+2025,11,Card,48
+2025,11,Cash,30
+2025,11,E-Wallet,32
+2025,11,Unknown,14
+2025,12,"Bank Transfer",20
+2025,12,Card,60
+2025,12,Cash,26
+2025,12,E-Wallet,34
+2025,12,Unknown,14
+2026,1,"Bank Transfer",10
+2026,1,Card,50
+2026,1,Cash,21
+2026,1,E-Wallet,33
+2026,1,Unknown,19
+2026,2,"Bank Transfer",16
+2026,2,Card,49
+2026,2,Cash,22
+2026,2,E-Wallet,46
+2026,2,Unknown,14
+2026,3,"Bank Transfer",7
+2026,3,Card,59
+2026,3,Cash,38
+2026,3,E-Wallet,49
+2026,3,Unknown,17
+2026,4,"Bank Transfer",15
+2026,4,Card,50
+2026,4,Cash,29
+2026,4,E-Wallet,40
+2026,4,Unknown,15
+2026,5,"Bank Transfer",13
+2026,5,Card,32
+2026,5,Cash,27
+2026,5,E-Wallet,40
+2026,5,Unknown,8
+2026,6,"Bank Transfer",15
+2026,6,Card,64
+2026,6,Cash,24
+2026,6,E-Wallet,35
+2026,6,Unknown,15

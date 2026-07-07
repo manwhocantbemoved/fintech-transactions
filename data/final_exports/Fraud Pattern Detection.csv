@@ -1,0 +1,4 @@
+fraud_flag,avg_amount,min_amount,max_amount,transaction_id
+0,729.32,-419079.20,304232.00,4234
+Unknown,1074.71,-138283.20,176538.00,1401
+1,1277.87,-6043.28,106509.60,365

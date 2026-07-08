@@ -186,7 +186,7 @@ In order to decide if usage has shifted throughout the years, I took the transac
 
 <img width="900" height="525" alt="image" src="https://github.com/user-attachments/assets/e587cfc4-de63-425a-9040-4c86e01a4da4" />
 
-# ** V. Findings**
+# **V. Findings**
 
 ### **1.) What's net revenue by month and the total revenue vs refund of merchant categories?**
 
@@ -297,7 +297,7 @@ In 2025, only Japan managed to have more e wallet usage than card as the rest of
 
 Overall, E-Wallet still has not seen more average use than Card, but it varies by country as seen with Japan and the Philippines' usage overtime.
 
-# **V. Recommendations**
+# **VI. Recommendations**
 
 ## **1.)** According to the Total Refund vs. Total Revenue analysis, refunds account for approximately 37% of total revenue. During 2023, 2025, and the first half of 2026, refunds accounted for nearly half of the revenue generated. Additionally, some merchant categories recorded refund amounts that exceeded their total revenue. Therefore, I recommend that the company review the top five merchant categories with the highest refund rates each month to identify recurring operational issues, payment disputes, or merchant specific problems and mitigate future revenue losses.
 
@@ -309,7 +309,7 @@ Overall, E-Wallet still has not seen more average use than Card, but it varies b
 
 ## **4.)** Since e-wallet usage experienced notable growth during the first half of 2026, the company should continue investing in its e wallet infrastructure and promotional initiatives. Encouraging merchants and customers to adopt e wallet payments can capitalize on this growing trend while maintaining support for card payments in countries where they remain the preferred payment method.
 
-#**VI. Key Assumptions & Limitations**
+# **VII. Key Assumptions & Limitations**
 - Exchange rates were converted using modern PHP conversion rates.
 - RFM thresholds (100k PHP, 10 transactions, 180 days) were manually defined for this project.
 - Duplicate records were removed based on the implemented SQL logic.

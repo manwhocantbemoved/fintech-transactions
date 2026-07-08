@@ -57,19 +57,11 @@ Both were resolved using `ROW_NUMBER() OVER (PARTITION BY transaction_id ORDER B
 
 Midway through analysis, it became clear that `amount` values were being summed across four different currencies (PHP, USD, SGD, JPY) without conversion — meaning early revenue totals were mathematically meaningless (a peso amount and a dollar amount are not the same unit and cannot simply be added together). This was corrected by creating `clean_transactions_php`, converting every transaction to a common PHP baseline using fixed exchange rates. These rates are stated as an illustrative assumption for this project, not real-time or historically accurate figures.
 
-### 6. Outlier detection
-
-Using both the IQR method and the mean ± 3 standard deviations method, a meaningful share of transactions (roughly 13% by one measure) were identified as statistical outliers — some reaching over ₱300,000 against a typical transaction size in the hundreds to low thousands of pesos. Investigation of individual outlier rows (e.g., a ₱304,232 "purchase" with an unknown merchant category and a failed status) showed the evidence was ambiguous rather than conclusively fraudulent or conclusively legitimate — a case explicitly treated as inconclusive rather than resolved either way.
-
-An important distinction was made between two uses of this same information:
-- For **revenue/refund reporting**, extreme outliers were excluded to avoid a small number of erroneous or synthetic values distorting otherwise typical totals.
-- For **fraud analysis**, the same outlier transactions were deliberately retained and examined directly, since unusually large transaction size is itself a relevant fraud signal rather than noise to discard. Excluding outliers from fraud analysis would remove exactly the data most relevant to that question.
-
-### 7. Payment method grouping
+### 6. Payment method grouping
 
 `GCash`, `PayMaya`, and a generic `E-Wallet` label were initially treated as separate payment methods in the cleaned data. Since the business question asks about e-wallet usage as a category (not individual apps), these were consolidated into a single `E-Wallet` grouping for the payment method trend analysis.
 
-### 8. Handling missing values
+### 7. Handling missing values
 
 Rather than deleting rows with missing data, missing values were preserved and handled according to column type:
 - Categorical columns: labeled `'Unknown'`, treated as their own reportable group.

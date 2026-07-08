@@ -1,4 +1,6 @@
 # **FINTECH DATA ANALYSIS**
+End to end SQL data cleaning and business analysis of a messy fintech transaction dataset using **MySQL** and **Power BI**.
+
 ## Table of Contents
 
 - Introduction
@@ -15,6 +17,8 @@ Financial technology companies process thousands of digital transactions every d
 
 This project began with a simple question: What can a fintech transaction dataset reveal once it has been cleaned and analyzed? To answer this, I challenged myself to only use SQL in order to clean and standardize the dataset containing digital financial transactions before analyzing and making a report out of it on Power BI. The cleaning process addresses inconsistencies such as mixed date formats, unformatted country names, duplicate transaction records, missing values, and multiple currencies to create a reliable foundation for the analysis.
 
+---
+
 # **II. Business Questions**
 
 1.) What's net revenue by month and the total revenue vs refund of merchant categories?
@@ -24,11 +28,11 @@ This project began with a simple question: What can a fintech transaction datase
 
 # **III. Data Cleaning Process**
 
-**1.) Uploading the dataset**
+##**1.) Uploading the dataset**
 
 I started by importing a messy fintech transaction dataset. I first used a little python in order to scout the columns and ended the whole python process there. I went back to SQL and created the tables with only VARCHAR datatypes in order for it to be uploaded smoothly into SQL.
 
-<img width="457" height="493" alt="image" src="https://github.com/user-attachments/assets/f26cfd83-1770-4d6f-87b6-66a6a1befefa" />
+###<img width="457" height="493" alt="image" src="https://github.com/user-attachments/assets/f26cfd83-1770-4d6f-87b6-66a6a1befefa" />
 
 This makes it so the messy data won't interfere with the uploading process. To then upload the dataset to SQL, I placed the CSV file into the program data file of MySQL and used LOAD DATA LOCAL INFILE to upload the dataset. 
 

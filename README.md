@@ -131,7 +131,7 @@ Later on in my analysis, I also realized that it is impossible to come up with a
 
 I did this by creating a new column for the converted amount and miltiplying the original amount by its modern conversion rate into PHP.
 
-# ** IV. Business Question Queries**
+# **IV. Business Question Queries**
 
 ## **1.) Net Revenue by Month - What's net revenue by month and the total revenue vs refund of merchant categories?**
 

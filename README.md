@@ -75,10 +75,9 @@ This decision was made deliberately after considering the cost of dropping rows 
 
 ### 1. Revenue & Refund Leakage
 
-<<<<<<< HEAD
 **The headline:** Currency mixing was the single biggest distortion in this question — early totals blended PHP, USD, SGD, and JPY as if they were the same unit before conversion. Once normalized to PHP, a handful of months (e.g. Jan 2023, mid-2025, mid-2026) showed refunds exceeding revenue outright — every one of these tied back to one or two extreme outlier transactions landing in a low-volume month, not a genuine business trend.
 
-`[ SCREENSHOT: Page 1 — Revenue & Refunds ]`
+<img width="1310" height="725" alt="image" src="https://github.com/user-attachments/assets/6a9c8e3b-a50d-403e-b039-6dd6468cee2a" />
 
 **Why it matters:** a refund ratio only means something once currencies are normalized. If this pattern holds beyond the data window studied here, it's the kind of leak that's cheap to catch early and expensive to catch late.
 

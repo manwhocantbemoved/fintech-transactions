@@ -75,6 +75,8 @@ This decision was made deliberately after considering the cost of dropping rows 
 
 Net revenue was calculated by month (using the currency-normalized `amount_php` field), separating total revenue (positive amounts) from total refunds (negative amounts). Refund-to-purchase ratio was calculated per merchant category by aggregating across the full dataset (rather than per month per category), since splitting by both dimensions simultaneously produced unstable ratios in categories with low transaction volume in a given month.
 
+<img width="1320" height="731" alt="image" src="https://github.com/user-attachments/assets/b7a929ba-5edd-41be-ae73-519edf653881" />
+
 *[Insert dashboard screenshot + specific findings: top refund-ratio categories, monthly revenue trend]*
 
 ### 2. Customer Segmentation (RFM)

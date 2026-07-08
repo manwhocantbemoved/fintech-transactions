@@ -1,7 +1,7 @@
 # **FINTECH DATA ANALYSIS**
 
 # **I. Introduction**
-Financial technology companies process thousands of digital transactions every day. Hidden within these tranascations are patterns that can help businesses understand customer behavior, identify potential risks, and monitor payment activity to make better business decisions. However, these insights are only valuable if the underlying data is accurate and well prepared. \n
+Financial technology companies process thousands of digital transactions every day. Hidden within these tranascations are patterns that can help businesses understand customer behavior, identify potential risks, and monitor payment activity to make better business decisions. However, these insights are only valuable if the underlying data is accurate and well prepared.
 
 This project began with a simple question: What can a fintech transaction dataset reveal once it has been cleaned and analyzed? To answer this, I challenged myself to only use SQL in order to clean and standardize the dataset containing digital financial transactions before analyzing and making a report out of it on Power BI. The cleaning process addresses inconsistencies such as mixed date formats, unformatted country names, duplicate transaction records, missing values, and multiple currencies to create a reliable foundation for the analysis.
 

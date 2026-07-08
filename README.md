@@ -112,12 +112,6 @@ I did this by creating a new column for the converted amount and miltiplying the
 **1.) What's net revenue by month and the total revenue vs refund of merchant categories?**
 
  <img width="902" height="515" alt="image" src="https://github.com/user-attachments/assets/4597b0bf-4e5c-449b-8595-6c194903c98e" />
- <img width="1163" height="648" alt="image" src="https://github.com/user-attachments/assets/b2e442ad-4c04-4878-a049-b0d4a84febef" />
- <img width="1153" height="648" alt="image" src="https://github.com/user-attachments/assets/12db96b2-6049-423f-a794-74eec8d6ee64" />
- <img width="1166" height="648" alt="image" src="https://github.com/user-attachments/assets/e7f0bc0b-74a7-4d86-ac2c-9b7d422f67c2" />
- <img width="1163" height="652" alt="image" src="https://github.com/user-attachments/assets/91768598-d004-462c-9a6e-e053f42ad03e" />
-
-
  I selected the month, year, and the merchant category along with total revenues and refunds and grouped them along.
 
  **2.) Which customers are high-value vs. dormant (RFM: recency, frequency, monetary)**
@@ -155,7 +149,16 @@ In order to decide if usage has shifted throughout the years, I took the transac
 # ** V. Findings**
 
 **1.) What's net revenue by month and the total revenue vs refund of merchant categories?**
+<img width="902" height="515" alt="image" src="https://github.com/user-attachments/assets/4597b0bf-4e5c-449b-8595-6c194903c98e" />
 
+ <img width="1163" height="648" alt="image" src="https://github.com/user-attachments/assets/b2e442ad-4c04-4878-a049-b0d4a84febef" />
+ 
+ <img width="1153" height="648" alt="image" src="https://github.com/user-attachments/assets/12db96b2-6049-423f-a794-74eec8d6ee64" />
+ 
+ <img width="1166" height="648" alt="image" src="https://github.com/user-attachments/assets/e7f0bc0b-74a7-4d86-ac2c-9b7d422f67c2" />
+ 
+ <img width="1163" height="652" alt="image" src="https://github.com/user-attachments/assets/91768598-d004-462c-9a6e-e053f42ad03e" />
+ 
 The net revenue per month merchant category has an average of 234.45k
 <img width="332" height="197" alt="image" src="https://github.com/user-attachments/assets/d258d118-6a04-4967-93e3-2f4dfc4e8184" />
 

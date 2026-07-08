@@ -1,5 +1,6 @@
 # Fintech Transaction Analytics — SQL & Power BI Project
 
+<<<<<<< HEAD
 ## The Question Behind the Project
 
 A fintech platform processing thousands of transactions a month rarely fails loudly. It fails quietly — a refund rate that creeps up in one category, a handful of high-spend customers slipping into inactivity unnoticed, a fraud pattern hiding behind incomplete records, a payment channel shift nobody flagged until the support tickets piled up. None of these show up on a balance sheet until they're already expensive.
@@ -9,6 +10,11 @@ This project simulates exactly that situation: a raw, messy transactions export 
 ## Overview
 
 The goal was to build a full analytics pipeline end-to-end: import raw data, clean and standardize it using SQL, and answer four business questions through a multi-page Power BI dashboard.
+=======
+## Overview
+
+This project analyzes a synthetic fintech transactions dataset (~6,100 rows) designed to simulate the kind of messy, real-world data a data analyst typically encounters — inconsistent formatting, missing values, duplicate records, mixed currencies, and statistical outliers. The goal was to build a full analytics pipeline end-to-end: import raw data, clean and standardize it using SQL, and answer four business questions through a multi-page Power BI dashboard.
+>>>>>>> bb17ca79013126d8e9320c728f1954a5db93bb2d
 
 **Tools used:** MySQL / MySQL Workbench (data cleaning, transformation, analysis), Power BI (dashboard and visualization).
 
@@ -79,6 +85,7 @@ This decision was made deliberately after considering the cost of dropping rows 
 
 ### 1. Revenue & Refund Leakage
 
+<<<<<<< HEAD
 **The headline:** Currency mixing was the single biggest distortion in this question — early totals blended PHP, USD, SGD, and JPY as if they were the same unit before conversion. Once normalized to PHP, a handful of months (e.g. Jan 2023, mid-2025, mid-2026) showed refunds exceeding revenue outright — every one of these tied back to one or two extreme outlier transactions landing in a low-volume month, not a genuine business trend.
 
 `[ SCREENSHOT: Page 1 — Revenue & Refunds ]`
@@ -89,6 +96,16 @@ This decision was made deliberately after considering the cost of dropping rows 
 
 **The headline:** Dormant customers averaged 387 days since their last transaction — more than a year of inactivity — while High Value and Regular customers were both active within roughly the last 2–3 months (74 and 82 days respectively). High Value customers also transacted nearly twice as often as Regular customers (11.08 vs. 6.62 average transactions) and generated over double the average revenue (₱0.43M vs. ₱0.18M).
 
+=======
+Net revenue was calculated by month (using the currency-normalized `amount_php` field), separating total revenue (positive amounts) from total refunds (negative amounts). Refund-to-purchase ratio was calculated per merchant category by aggregating across the full dataset (rather than per month per category), since splitting by both dimensions simultaneously produced unstable ratios in categories with low transaction volume in a given month.
+
+<img width="1320" height="731" alt="image" src="https://github.com/user-attachments/assets/b7a929ba-5edd-41be-ae73-519edf653881" />
+
+*[Insert dashboard screenshot + specific findings: top refund-ratio categories, monthly revenue trend]*
+
+### 2. Customer Segmentation (RFM)
+
+>>>>>>> bb17ca79013126d8e9320c728f1954a5db93bb2d
 Customers were segmented into **High Value**, **Regular**, and **Dormant** using:
 - **Recency:** days since last transaction (dormant threshold set at 180 days / 6 months, based on common industry ranges of 3–12 months)
 - **Frequency:** total transaction count (High Value threshold: 10+ transactions)
@@ -96,6 +113,7 @@ Customers were segmented into **High Value**, **Regular**, and **Dormant** using
 
 A customer must meet all three High Value thresholds simultaneously; otherwise, they're classified Dormant (if inactive beyond 180 days) or Regular.
 
+<<<<<<< HEAD
 `[ SCREENSHOT: Page 2 — Customer Segmentation ]`
 
 **Notable finding:** the segmentation logic is frequency-gated — a customer with very high total revenue but low transaction frequency (i.e., a small number of very large transactions) can be classified as "Regular" rather than "High Value," since the frequency threshold isn't met even though the monetary threshold is far exceeded. This suggests the current thresholds may undervalue infrequent, high-spend customers, and is worth revisiting with adjusted or weighted criteria in a future iteration.
@@ -112,10 +130,25 @@ A customer must meet all three High Value thresholds simultaneously; otherwise, 
 
 **Why it matters:** fraud that hides in the "unknown" 23% is fraud the business can't currently price into its risk model. The pattern found in the *known* 77% is still directionally useful, but the honest conclusion is that a fifth of the picture is missing — worth surfacing to whoever owns fraud review before this analysis is treated as complete.
 
+=======
+*[Insert dashboard screenshot + specific findings: segment counts, average RFM values per segment]*
+
+**Notable finding:** the segmentation logic is frequency-gated — a customer with very high total revenue but low transaction frequency (i.e., a small number of very large transactions) can be classified as "Regular" rather than "High Value," since the frequency threshold isn't met even though the monetary threshold is far exceeded. This suggests the current thresholds may undervalue infrequent, high-spend customers, and is worth revisiting with adjusted or weighted criteria in a future iteration.
+
+### 3. Fraud Pattern Detection
+
+Fraud patterns were examined across three dimensions: transaction amount (average/min/max by fraud status), payment method (fraud rate per method), and country (fraud rate per country).
+
+*[Insert dashboard screenshot + specific findings: fraud rate leaders by payment method/country, amount comparison]*
+
+**Key limitation:** approximately 23% of transactions had no recorded fraud status (`'Unknown'`). All fraud rate percentages are calculated relative to the full transaction count, meaning true fraud rates among transactions with a *known* status may differ from the reported figures. This is flagged as a data completeness gap rather than resolved by assumption.
+
+>>>>>>> bb17ca79013126d8e9320c728f1954a5db93bb2d
 ### 4. Payment Method & Channel Trends
 
 Payment methods were grouped into three channels — **E-Wallet** (GCash, PayMaya, generic e-wallet), **Card** (credit/debit), and **Bank Transfer** — and tracked by transaction count over time and by country.
 
+<<<<<<< HEAD
 `[ SCREENSHOT: Page 4 — Payment Method & Channel Trends ]`
 
 **Note:** GCash, PayMaya, and a generic "E-Wallet" label were initially separate values in the raw data — these were consolidated into one E-Wallet channel so the trend reflects the category as a whole, not individual apps competing against each other in the same chart.
@@ -129,6 +162,9 @@ Payment methods were grouped into three channels — **E-Wallet** (GCash, PayMay
 Four questions, one dataset, and a consistent thread running underneath all of them: **the gap between what the raw numbers show and what's actually true is often where the real insight lives.** A refund ratio only means something once currencies are normalized. A "High Value" label only means something once the thresholds are examined for who they accidentally exclude. A fraud rate only means something once you know how much of the picture is missing. A channel trend only matters if the business is prepared to support where volume is actually heading.
 
 None of these four findings exist in isolation — together, they sketch a platform that's generating real revenue, but with real, specific, fixable leaks: refunds concentrated in a few categories, high-value customers at risk of being misclassified or lost to dormancy, a fraud signal that's only 77% visible, and a payment mix shifting faster than support/fraud infrastructure may be built for. That's the actual value of this kind of analysis — not just answering four questions, but surfacing where a business should look next.
+=======
+*[Insert dashboard screenshot + specific findings: channel shift over time, country-level differences]*
+>>>>>>> bb17ca79013126d8e9320c728f1954a5db93bb2d
 
 ---
 
@@ -142,6 +178,7 @@ The Power BI report is organized into pages by business question:
 
 ---
 
+<<<<<<< HEAD
 ## Recommendations
 
 Based on the findings above, the following actions are suggested:
@@ -166,6 +203,8 @@ Based on the findings above, the following actions are suggested:
 
 ---
 
+=======
+>>>>>>> bb17ca79013126d8e9320c728f1954a5db93bb2d
 ## Key Assumptions & Limitations
 
 - Exchange rates used for currency conversion are fixed, illustrative values, not real-time or transaction-date-accurate rates.

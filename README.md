@@ -1,19 +1,19 @@
 # FINTECH DATA ANALYSIS
 
-I. Introduction
-Financial technology companies process thousands of digital transactions every day. Hidden within these tranascations are patterns that can help businesses understand customer behavior, identify potential risks, and monitor payment activity to make better business decisions. However, these insights are only valuable if the underlying data is accurate and well prepared.
+**I. Introduction**
+Financial technology companies process thousands of digital transactions every day. Hidden within these tranascations are patterns that can help businesses understand customer behavior, identify potential risks, and monitor payment activity to make better business decisions. However, these insights are only valuable if the underlying data is accurate and well prepared. \n
 
 This project began with a simple question: What can a fintech transaction dataset reveal once it has been cleaned and analyzed? To answer this, I challenged myself to only use SQL in order to clean and standardize the dataset containing digital financial transactions before analyzing and making a report out of it on Power BI. The cleaning process addresses inconsistencies such as mixed date formats, unformatted country names, duplicate transaction records, missing values, and multiple currencies to create a reliable foundation for the analysis.
 
-II. Business Questions
+II. Business Questions \n
 1.) What's net revenue by month and the total revenue vs refund of merchant categories?
 2.) Which customers are high-value vs. dormant (RFM: recency, frequency, monetary)
 3.) What transaction characteristics (amount size, payment method, country) correlate with flagged fraud, once fraud_flag is standardized?
 4.) How has e-wallet usage shifted vs. cards/bank transfer over time, and does it vary by country?
 
-III. Data Cleaning Process
+III. Data Cleaning Process \n
 
-**1.) Uploading the dataset**
+**1.) Uploading the dataset** \n
 I started by importing a messy fintech transaction dataset. I first used a little python in order to scout the columns and ended the whole python process there. I went back to SQL and created the tables with only VARCHAR datatypes in order for it to be uploaded smoothly into SQL.
 
 <img width="457" height="493" alt="image" src="https://github.com/user-attachments/assets/f26cfd83-1770-4d6f-87b6-66a6a1befefa" />

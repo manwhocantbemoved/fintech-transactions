@@ -160,6 +160,7 @@ In order to decide if usage has shifted throughout the years, I took the transac
  <img width="1163" height="652" alt="image" src="https://github.com/user-attachments/assets/91768598-d004-462c-9a6e-e053f42ad03e" />
  
 The net revenue per month merchant category has an average of 234.45k
+
 <img width="332" height="197" alt="image" src="https://github.com/user-attachments/assets/d258d118-6a04-4967-93e3-2f4dfc4e8184" />
 
 The The total revenue counting per merchant category comes at a total of 178.86 Million PHP in total all while the total refunds come at a 66.06M cost.
@@ -242,4 +243,12 @@ Overall, E-Wallet still has not seen more average use than Card, but it varies b
 
 **V. Recommendations**
 
-- 
+**1.)** According to the Total Refund vs. Total Revenue analysis, refunds account for approximately 37% of total revenue. During 2023, 2025, and the first half of 2026, refunds accounted for nearly half of the revenue generated. Additionally, some merchant categories recorded refund amounts that exceeded their total revenue. Therefore, I recommend that the company review the top five merchant categories with the highest refund rates each month to identify recurring operational issues, payment disputes, or merchant specific problems and mitigate future revenue losses.
+
+**2.)** The company should consider extending the recency threshold for “Dormant” customers to one year before assigning that status. The analysis shows that some customers currently labeled as dormant have transaction amounts that exceed those of several high value customers, suggesting they may still represent meaningful revenue opportunities rather than truly inactive users. By allowing a longer inactivity window, the business can avoid prematurely categorizing potentially valuable customers as dormant and can design more targeted retention campaigns for users who transact infrequently but spend significant amounts when they do engage.
+
+**3.)** The business should implement enhanced verification for high value transactions. Since fraud transactions take up more of the total average transaction amount, measures such as multi step verifications and manual review for transactions above the average amount can help reduce financial losses over time while allowing lower risk transactions to be processed efficiently. 
+
+The company should also regularly review transactions with an unknown fraud status. Since these transactions have a higher average transaction amount than legitimate transactions, investigating them may help identify unresolved fraud cases or improve the accuracy of fraud classification.
+
+**4.)** Since e-wallet usage experienced notable growth during the first half of 2026, the company should continue investing in its e wallet infrastructure and promotional initiatives. Encouraging merchants and customers to adopt e wallet payments can capitalize on this growing trend while maintaining support for card payments in countries where they remain the preferred payment method.

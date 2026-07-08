@@ -13,7 +13,6 @@ The goal was to build a full analytics pipeline end-to-end: import raw data, cle
 ## Overview
 
 This project analyzes a synthetic fintech transactions dataset (~6,100 rows) designed to simulate the kind of messy, real-world data a data analyst typically encounters — inconsistent formatting, missing values, duplicate records, mixed currencies, and statistical outliers. The goal was to build a full analytics pipeline end-to-end: import raw data, clean and standardize it using SQL, and answer four business questions through a multi-page Power BI dashboard.
->>>>>>> bb17ca79013126d8e9320c728f1954a5db93bb2d
 
 **Tools used:** MySQL / MySQL Workbench (data cleaning, transformation, analysis), Power BI (dashboard and visualization).
 

@@ -1,6 +1,5 @@
 # Fintech Transaction Analytics — SQL & Power BI Project
 
-<<<<<<< HEAD
 ## The Question Behind the Project
 
 A fintech platform processing thousands of transactions a month rarely fails loudly. It fails quietly — a refund rate that creeps up in one category, a handful of high-spend customers slipping into inactivity unnoticed, a fraud pattern hiding behind incomplete records, a payment channel shift nobody flagged until the support tickets piled up. None of these show up on a balance sheet until they're already expensive.

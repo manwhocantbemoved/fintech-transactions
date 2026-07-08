@@ -1,0 +1,6 @@
+country,Transactions,fraud_count,fraud_pct_per_country
+Philippines,1990,128,6.43
+Singapore,972,44,4.53
+Japan,1032,68,6.59
+"United States",1509,100,6.63
+Unknown,497,25,5.03

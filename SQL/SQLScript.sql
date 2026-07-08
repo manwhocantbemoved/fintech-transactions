@@ -250,10 +250,9 @@ FROM clean_transactions;
 
 /* 
 Revenue & refund leakage — What's net revenue by month and the total revenue vs refund of merchant categories
-Customer segmentation — Which customers are high-value vs. dormant (RFM: recency, frequency, monetary), and does signup cohort predict transaction volume?
+Customer segmentation — Which customers are high-value vs. dormant (RFM: recency, frequency, monetary)
 Fraud pattern detection — What transaction characteristics (amount size, payment method, country) correlate with flagged fraud, once fraud_flag is standardized?
 Payment method & channel trends — How has e-wallet usage shifted vs. cards/bank transfer over time, and does it vary by country?
-Data quality / reconciliation audit — Quantify the messiness: % missing per column, duplicate transaction_ids with conflicting values, outliers beyond 3 standard deviations — then explain how you cleaned it.
 */
 
 -- 1. Revenue to Refund ratio
@@ -287,7 +286,7 @@ GROUP BY merchant_category
 ORDER BY refund_ratio DESC;
 
 -- 2. Customer Segmentation
--- Which customers are high-value vs. dormant (RFM: recency, frequency, monetary), and does signup cohort predict transaction volume?
+-- Which customers are high-value vs. dormant (RFM: recency, frequency, monetary)
 SELECT
 	customer_id,
     DATEDIFF (curdate(), MAX(transaction_date)) AS last_transaction,
@@ -388,81 +387,5 @@ ORDER BY transaction_year, transaction_month;
 -- END
 -- WHERE payment_method IN ('GCash', 'PayMaya', 'E-Wallet');
 
--- SET SQL_SAFE_UPDATES = 0; 
-
--- 5 Data quality / reconciliation audit 
--- Quantify the messiness: % missing per column, duplicate transaction_ids with conflicting values, outliers beyond 3 standard deviations 
--- then explain how you cleaned it.
-
--- Indicate how many unknowns/nulls are in the dataset
-SELECT
-    -- String columns: evaluate the 'Unknown' text directly
-    ROUND(AVG(transaction_id = 'Unknown'), 4) * 100 AS pct_missing_transaction_id,
-    ROUND(AVG(customer_id = 'Unknown'), 4) * 100 AS pct_missing_customer_id,
-    ROUND(AVG(first_name = 'Unknown'), 4) * 100 AS pct_missing_first_name,
-    ROUND(AVG(last_name = 'Unknown'), 4) * 100 AS pct_missing_last_name,
-    ROUND(AVG(country = 'Unknown'), 4) * 100 AS pct_missing_country,
-    ROUND(AVG(clean_currency = 'Unknown'), 4) * 100 AS pct_missing_clean_currency,
-    ROUND(AVG(transaction_type = 'Unknown'), 4) * 100 AS pct_missing_transaction_type,
-    ROUND(AVG(merchant_category = 'Unknown'), 4) * 100 AS pct_missing_merchant_category,
-    ROUND(AVG(payment_method = 'Unknown'), 4) * 100 AS pct_missing_payment_method,
-    ROUND(AVG(issuing_bank = 'Unknown'), 4) * 100 AS pct_missing_issuing_bank,
-    ROUND(AVG(status = 'Unknown'), 4) * 100 AS pct_missing_status,
-    ROUND(AVG(fraud_flag = 'Unknown'), 4) * 100 AS pct_missing_fraud_flag,
-
-    -- Date and Numeric columns: evaluate IS NULL directly (avoids Error 1525)
-    ROUND(AVG(transaction_date IS NULL), 4) * 100 AS pct_missing_transaction_date,
-    ROUND(AVG(transaction_year IS NULL), 4) * 100 AS pct_missing_transaction_year,
-    ROUND(AVG(transaction_month IS NULL), 4) * 100 AS pct_missing_transaction_month,
-    ROUND(AVG(transaction_day IS NULL), 4) * 100 AS pct_missing_transaction_day,
-    ROUND(AVG(signup_date IS NULL), 4) * 100 AS pct_missing_signup_date,
-    ROUND(AVG(signup_year IS NULL), 4) * 100 AS pct_missing_signup_year,
-    ROUND(AVG(signup_month IS NULL), 4) * 100 AS pct_missing_signup_month,
-    ROUND(AVG(signup_day IS NULL), 4) * 100 AS pct_missing_signup_day,
-    ROUND(AVG(amount IS NULL), 4) * 100 AS pct_missing_amount,
-    ROUND(AVG(account_balance IS NULL), 4) * 100 AS pct_missing_account_balance,
-    ROUND(AVG(amount_php IS NULL), 4) * 100 AS pct_missing_amount_php
-FROM clean_transactions_php;
-
--- REMOVED DUPLICATE ROWS WITH 
--- CREATE TABLE clean_transactions_deduped AS
--- SELECT * FROM (
---     SELECT *,
---            ROW_NUMBER() OVER (PARTITION BY transaction_id ORDER BY transaction_date) AS rn
---     FROM clean_transactions
--- ) ranked
--- WHERE rn = 1;
-
--- After creating tables, I found some more data that needed to be merged together such as currencies into one currency format for
--- less redundancy for reporting and visual purposes.alter
-
--- THIS QUERY WAS THE FIRST "CLEAN TRANSACTION" TABLE BEFORE I STARTED REMOVING DUPLICATES
-SELECT transaction_id, COUNT(*) AS occurrences
-FROM clean_transactions
-GROUP BY transaction_id
-HAVING COUNT(*) > 1;
-
-SELECT
-    ROUND(AVG(amount_php), 2) AS mean_amount,
-    ROUND(STDDEV(amount_php), 2) AS stddev_amount
-FROM clean_transactions_php;
-
-SELECT
-    COUNT(*) AS total_outliers,
-    ROUND(COUNT(*) / (SELECT COUNT(*) FROM clean_transactions_php WHERE amount_php IS NOT NULL) * 100, 2) AS pct_outliers
-FROM clean_transactions_php
-WHERE amount_php > (SELECT AVG(amount_php) + 3 * STDDEV(amount_php) FROM clean_transactions_php)
-   OR amount_php < (SELECT AVG(amount_php) - 3 * STDDEV(amount_php) FROM clean_transactions_php);
-   
-UPDATE clean_transactions_php
-SET merchant_category =
-CASE WHEN merchant_category IN ('Dining', 'dining') THEN 'Dining' ELSE merchant_category END WHERE merchant_category IN ('Dining', 'dining');
-
-SET SQL_SAFE_UPDATES = 0;
-
-SELECT 
-    COUNT(*) AS total_rows,
-    ROUND(AVG(amount_php), 2) AS avg_amount,
-    ROUND(SUM(amount_php), 2) AS total_sum
-FROM clean_transactions_php;
+-- SET SQL_SAFE_UPDATES = 0; 	
 

@@ -1,0 +1,7 @@
+payment_method,fraud_counts,Transactions,fraud_pct_per_payment_method
+Cash,75,1043,7.19
+"Debit Card",57,1112,5.13
+E-Wallet,107,1625,6.58
+Unknown,32,544,5.88
+"Bank Transfer",24,553,4.34
+"Credit Card",70,1123,6.23

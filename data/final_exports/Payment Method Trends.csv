@@ -1,211 +1,986 @@
-transaction_year,transaction_month,payment_channel,"Total Transaction"
-2023,1,"Bank Transfer",23
-2023,1,Card,59
-2023,1,Cash,22
-2023,1,E-Wallet,46
-2023,1,Unknown,13
-2023,2,"Bank Transfer",11
-2023,2,Card,46
-2023,2,Cash,18
-2023,2,E-Wallet,36
-2023,2,Unknown,10
-2023,3,"Bank Transfer",14
-2023,3,Card,53
-2023,3,Cash,31
-2023,3,E-Wallet,36
-2023,3,Unknown,19
-2023,4,"Bank Transfer",15
-2023,4,Card,58
-2023,4,Cash,19
-2023,4,E-Wallet,43
-2023,4,Unknown,10
-2023,5,"Bank Transfer",16
-2023,5,Card,60
-2023,5,Cash,31
-2023,5,E-Wallet,35
-2023,5,Unknown,19
-2023,6,"Bank Transfer",15
-2023,6,Card,54
-2023,6,Cash,31
-2023,6,E-Wallet,43
-2023,6,Unknown,6
-2023,7,"Bank Transfer",13
-2023,7,Card,58
-2023,7,Cash,28
-2023,7,E-Wallet,41
-2023,7,Unknown,11
-2023,8,"Bank Transfer",15
-2023,8,Card,51
-2023,8,Cash,29
-2023,8,E-Wallet,34
-2023,8,Unknown,13
-2023,9,"Bank Transfer",13
-2023,9,Card,49
-2023,9,Cash,23
-2023,9,E-Wallet,33
-2023,9,Unknown,21
-2023,10,"Bank Transfer",15
-2023,10,Card,69
-2023,10,Cash,34
-2023,10,E-Wallet,33
-2023,10,Unknown,17
-2023,11,"Bank Transfer",6
-2023,11,Card,46
-2023,11,Cash,23
-2023,11,E-Wallet,42
-2023,11,Unknown,14
-2023,12,"Bank Transfer",12
-2023,12,Card,51
-2023,12,Cash,32
-2023,12,E-Wallet,31
-2023,12,Unknown,9
-2024,1,"Bank Transfer",13
-2024,1,Card,56
-2024,1,Cash,21
-2024,1,E-Wallet,41
-2024,1,Unknown,10
-2024,2,"Bank Transfer",14
-2024,2,Card,55
-2024,2,Cash,23
-2024,2,E-Wallet,40
-2024,2,Unknown,8
-2024,3,"Bank Transfer",11
-2024,3,Card,50
-2024,3,Cash,34
-2024,3,E-Wallet,49
-2024,3,Unknown,22
-2024,4,"Bank Transfer",7
-2024,4,Card,47
-2024,4,Cash,24
-2024,4,E-Wallet,36
-2024,4,Unknown,11
-2024,5,"Bank Transfer",12
-2024,5,Card,49
-2024,5,Cash,23
-2024,5,E-Wallet,37
-2024,5,Unknown,10
-2024,6,"Bank Transfer",14
-2024,6,Card,65
-2024,6,Cash,32
-2024,6,E-Wallet,41
-2024,6,Unknown,14
-2024,7,"Bank Transfer",8
-2024,7,Card,55
-2024,7,Cash,21
-2024,7,E-Wallet,48
-2024,7,Unknown,15
-2024,8,"Bank Transfer",12
-2024,8,Card,52
-2024,8,Cash,28
-2024,8,E-Wallet,30
-2024,8,Unknown,7
-2024,9,"Bank Transfer",11
-2024,9,Card,55
-2024,9,Cash,21
-2024,9,E-Wallet,32
-2024,9,Unknown,14
-2024,10,"Bank Transfer",8
-2024,10,Card,52
-2024,10,Cash,15
-2024,10,E-Wallet,44
-2024,10,Unknown,7
-2024,11,"Bank Transfer",16
-2024,11,Card,47
-2024,11,Cash,18
-2024,11,E-Wallet,23
-2024,11,Unknown,12
-2024,12,"Bank Transfer",15
-2024,12,Card,44
-2024,12,Cash,30
-2024,12,E-Wallet,39
-2024,12,Unknown,16
-2025,1,"Bank Transfer",6
-2025,1,Card,55
-2025,1,Cash,20
-2025,1,E-Wallet,51
-2025,1,Unknown,9
-2025,2,"Bank Transfer",14
-2025,2,Card,40
-2025,2,Cash,23
-2025,2,E-Wallet,30
-2025,2,Unknown,13
-2025,3,"Bank Transfer",10
-2025,3,Card,57
-2025,3,Cash,16
-2025,3,E-Wallet,39
-2025,3,Unknown,8
-2025,4,"Bank Transfer",11
-2025,4,Card,62
-2025,4,Cash,18
-2025,4,E-Wallet,42
-2025,4,Unknown,14
-2025,5,"Bank Transfer",15
-2025,5,Card,51
-2025,5,Cash,23
-2025,5,E-Wallet,42
-2025,5,Unknown,19
-2025,6,"Bank Transfer",16
-2025,6,Card,52
-2025,6,Cash,30
-2025,6,E-Wallet,45
-2025,6,Unknown,12
-2025,7,"Bank Transfer",14
-2025,7,Card,61
-2025,7,Cash,22
-2025,7,E-Wallet,42
-2025,7,Unknown,11
-2025,8,"Bank Transfer",22
-2025,8,Card,55
-2025,8,Cash,24
-2025,8,E-Wallet,42
-2025,8,Unknown,20
-2025,9,"Bank Transfer",12
-2025,9,Card,50
-2025,9,Cash,20
-2025,9,E-Wallet,30
-2025,9,Unknown,7
-2025,10,"Bank Transfer",8
-2025,10,Card,59
-2025,10,Cash,19
-2025,10,E-Wallet,40
-2025,10,Unknown,7
-2025,11,"Bank Transfer",20
-2025,11,Card,48
-2025,11,Cash,30
-2025,11,E-Wallet,32
-2025,11,Unknown,14
-2025,12,"Bank Transfer",20
-2025,12,Card,60
-2025,12,Cash,26
-2025,12,E-Wallet,34
-2025,12,Unknown,14
-2026,1,"Bank Transfer",10
-2026,1,Card,50
-2026,1,Cash,21
-2026,1,E-Wallet,33
-2026,1,Unknown,19
-2026,2,"Bank Transfer",16
-2026,2,Card,49
-2026,2,Cash,22
-2026,2,E-Wallet,46
-2026,2,Unknown,14
-2026,3,"Bank Transfer",7
-2026,3,Card,59
-2026,3,Cash,38
-2026,3,E-Wallet,49
-2026,3,Unknown,17
-2026,4,"Bank Transfer",15
-2026,4,Card,50
-2026,4,Cash,29
-2026,4,E-Wallet,40
-2026,4,Unknown,15
-2026,5,"Bank Transfer",13
-2026,5,Card,32
-2026,5,Cash,27
-2026,5,E-Wallet,40
-2026,5,Unknown,8
-2026,6,"Bank Transfer",15
-2026,6,Card,64
-2026,6,Cash,24
-2026,6,E-Wallet,35
-2026,6,Unknown,15
+transaction_year,transaction_month,payment_channel,country,"Total Transaction"
+2023,1,"Bank Transfer",Japan,1
+2023,1,"Bank Transfer",Philippines,12
+2023,1,"Bank Transfer",Singapore,5
+2023,1,"Bank Transfer","United States",5
+2023,1,Card,Japan,10
+2023,1,Card,Philippines,17
+2023,1,Card,Singapore,8
+2023,1,Card,"United States",22
+2023,1,Card,Unknown,2
+2023,1,Cash,Japan,3
+2023,1,Cash,Philippines,7
+2023,1,Cash,Singapore,5
+2023,1,Cash,"United States",5
+2023,1,Cash,Unknown,2
+2023,1,E-Wallet,Japan,7
+2023,1,E-Wallet,Philippines,16
+2023,1,E-Wallet,Singapore,6
+2023,1,E-Wallet,"United States",11
+2023,1,E-Wallet,Unknown,6
+2023,1,Unknown,Japan,3
+2023,1,Unknown,Philippines,6
+2023,1,Unknown,Singapore,1
+2023,1,Unknown,"United States",1
+2023,1,Unknown,Unknown,2
+2023,2,"Bank Transfer",Philippines,5
+2023,2,"Bank Transfer",Singapore,2
+2023,2,"Bank Transfer","United States",2
+2023,2,"Bank Transfer",Unknown,2
+2023,2,Card,Japan,12
+2023,2,Card,Philippines,20
+2023,2,Card,Singapore,3
+2023,2,Card,"United States",9
+2023,2,Card,Unknown,2
+2023,2,Cash,Japan,3
+2023,2,Cash,Philippines,7
+2023,2,Cash,Singapore,3
+2023,2,Cash,"United States",4
+2023,2,Cash,Unknown,1
+2023,2,E-Wallet,Japan,4
+2023,2,E-Wallet,Philippines,14
+2023,2,E-Wallet,Singapore,5
+2023,2,E-Wallet,"United States",12
+2023,2,E-Wallet,Unknown,1
+2023,2,Unknown,Japan,1
+2023,2,Unknown,Philippines,5
+2023,2,Unknown,Singapore,3
+2023,2,Unknown,"United States",1
+2023,3,"Bank Transfer",Philippines,6
+2023,3,"Bank Transfer",Singapore,3
+2023,3,"Bank Transfer","United States",1
+2023,3,"Bank Transfer",Unknown,4
+2023,3,Card,Japan,7
+2023,3,Card,Philippines,19
+2023,3,Card,Singapore,10
+2023,3,Card,"United States",12
+2023,3,Card,Unknown,5
+2023,3,Cash,Japan,6
+2023,3,Cash,Philippines,12
+2023,3,Cash,Singapore,5
+2023,3,Cash,"United States",5
+2023,3,Cash,Unknown,3
+2023,3,E-Wallet,Japan,7
+2023,3,E-Wallet,Philippines,13
+2023,3,E-Wallet,Singapore,6
+2023,3,E-Wallet,"United States",6
+2023,3,E-Wallet,Unknown,4
+2023,3,Unknown,Japan,2
+2023,3,Unknown,Philippines,7
+2023,3,Unknown,Singapore,3
+2023,3,Unknown,"United States",4
+2023,3,Unknown,Unknown,3
+2023,4,"Bank Transfer",Japan,3
+2023,4,"Bank Transfer",Philippines,7
+2023,4,"Bank Transfer",Singapore,5
+2023,4,Card,Japan,8
+2023,4,Card,Philippines,20
+2023,4,Card,Singapore,10
+2023,4,Card,"United States",19
+2023,4,Card,Unknown,1
+2023,4,Cash,Japan,4
+2023,4,Cash,Philippines,8
+2023,4,Cash,Singapore,4
+2023,4,Cash,"United States",3
+2023,4,E-Wallet,Japan,7
+2023,4,E-Wallet,Philippines,14
+2023,4,E-Wallet,Singapore,4
+2023,4,E-Wallet,"United States",13
+2023,4,E-Wallet,Unknown,5
+2023,4,Unknown,Japan,2
+2023,4,Unknown,Philippines,3
+2023,4,Unknown,"United States",3
+2023,4,Unknown,Unknown,2
+2023,5,"Bank Transfer",Japan,2
+2023,5,"Bank Transfer",Philippines,9
+2023,5,"Bank Transfer",Singapore,1
+2023,5,"Bank Transfer","United States",4
+2023,5,Card,Japan,12
+2023,5,Card,Philippines,20
+2023,5,Card,Singapore,8
+2023,5,Card,"United States",15
+2023,5,Card,Unknown,5
+2023,5,Cash,Japan,1
+2023,5,Cash,Philippines,11
+2023,5,Cash,Singapore,8
+2023,5,Cash,"United States",9
+2023,5,Cash,Unknown,2
+2023,5,E-Wallet,Japan,4
+2023,5,E-Wallet,Philippines,14
+2023,5,E-Wallet,Singapore,3
+2023,5,E-Wallet,"United States",10
+2023,5,E-Wallet,Unknown,4
+2023,5,Unknown,Japan,3
+2023,5,Unknown,Philippines,7
+2023,5,Unknown,Singapore,3
+2023,5,Unknown,"United States",4
+2023,5,Unknown,Unknown,2
+2023,6,"Bank Transfer",Japan,2
+2023,6,"Bank Transfer",Philippines,6
+2023,6,"Bank Transfer",Singapore,1
+2023,6,"Bank Transfer","United States",6
+2023,6,Card,Japan,9
+2023,6,Card,Philippines,15
+2023,6,Card,Singapore,11
+2023,6,Card,"United States",11
+2023,6,Card,Unknown,8
+2023,6,Cash,Japan,4
+2023,6,Cash,Philippines,10
+2023,6,Cash,Singapore,2
+2023,6,Cash,"United States",9
+2023,6,Cash,Unknown,6
+2023,6,E-Wallet,Japan,8
+2023,6,E-Wallet,Philippines,14
+2023,6,E-Wallet,Singapore,5
+2023,6,E-Wallet,"United States",12
+2023,6,E-Wallet,Unknown,4
+2023,6,Unknown,Japan,1
+2023,6,Unknown,Philippines,1
+2023,6,Unknown,Singapore,1
+2023,6,Unknown,"United States",3
+2023,7,"Bank Transfer",Japan,3
+2023,7,"Bank Transfer",Philippines,7
+2023,7,"Bank Transfer",Singapore,1
+2023,7,"Bank Transfer","United States",2
+2023,7,Card,Japan,9
+2023,7,Card,Philippines,18
+2023,7,Card,Singapore,10
+2023,7,Card,"United States",11
+2023,7,Card,Unknown,10
+2023,7,Cash,Japan,4
+2023,7,Cash,Philippines,9
+2023,7,Cash,Singapore,8
+2023,7,Cash,"United States",5
+2023,7,Cash,Unknown,2
+2023,7,E-Wallet,Japan,7
+2023,7,E-Wallet,Philippines,11
+2023,7,E-Wallet,Singapore,9
+2023,7,E-Wallet,"United States",9
+2023,7,E-Wallet,Unknown,5
+2023,7,Unknown,Japan,2
+2023,7,Unknown,Philippines,4
+2023,7,Unknown,Singapore,2
+2023,7,Unknown,"United States",3
+2023,8,"Bank Transfer",Japan,4
+2023,8,"Bank Transfer",Philippines,4
+2023,8,"Bank Transfer",Singapore,3
+2023,8,"Bank Transfer","United States",4
+2023,8,Card,Japan,14
+2023,8,Card,Philippines,15
+2023,8,Card,Singapore,7
+2023,8,Card,"United States",15
+2023,8,Cash,Japan,5
+2023,8,Cash,Philippines,13
+2023,8,Cash,Singapore,5
+2023,8,Cash,"United States",5
+2023,8,Cash,Unknown,1
+2023,8,E-Wallet,Japan,5
+2023,8,E-Wallet,Philippines,13
+2023,8,E-Wallet,Singapore,6
+2023,8,E-Wallet,"United States",8
+2023,8,E-Wallet,Unknown,2
+2023,8,Unknown,Japan,4
+2023,8,Unknown,Philippines,4
+2023,8,Unknown,Singapore,2
+2023,8,Unknown,"United States",3
+2023,9,"Bank Transfer",Japan,4
+2023,9,"Bank Transfer",Philippines,5
+2023,9,"Bank Transfer",Singapore,3
+2023,9,"Bank Transfer","United States",1
+2023,9,Card,Japan,5
+2023,9,Card,Philippines,21
+2023,9,Card,Singapore,7
+2023,9,Card,"United States",12
+2023,9,Card,Unknown,4
+2023,9,Cash,Japan,6
+2023,9,Cash,Philippines,7
+2023,9,Cash,Singapore,6
+2023,9,Cash,"United States",4
+2023,9,E-Wallet,Japan,6
+2023,9,E-Wallet,Philippines,8
+2023,9,E-Wallet,Singapore,8
+2023,9,E-Wallet,"United States",8
+2023,9,E-Wallet,Unknown,3
+2023,9,Unknown,Japan,5
+2023,9,Unknown,Philippines,8
+2023,9,Unknown,Singapore,3
+2023,9,Unknown,"United States",4
+2023,9,Unknown,Unknown,1
+2023,10,"Bank Transfer",Japan,3
+2023,10,"Bank Transfer",Philippines,4
+2023,10,"Bank Transfer",Singapore,4
+2023,10,"Bank Transfer","United States",4
+2023,10,Card,Japan,11
+2023,10,Card,Philippines,24
+2023,10,Card,Singapore,15
+2023,10,Card,"United States",14
+2023,10,Card,Unknown,5
+2023,10,Cash,Japan,6
+2023,10,Cash,Philippines,13
+2023,10,Cash,Singapore,5
+2023,10,Cash,"United States",7
+2023,10,Cash,Unknown,3
+2023,10,E-Wallet,Japan,8
+2023,10,E-Wallet,Philippines,7
+2023,10,E-Wallet,Singapore,4
+2023,10,E-Wallet,"United States",10
+2023,10,E-Wallet,Unknown,4
+2023,10,Unknown,Japan,3
+2023,10,Unknown,Philippines,4
+2023,10,Unknown,Singapore,3
+2023,10,Unknown,"United States",2
+2023,10,Unknown,Unknown,5
+2023,11,"Bank Transfer",Philippines,1
+2023,11,"Bank Transfer",Singapore,3
+2023,11,"Bank Transfer","United States",1
+2023,11,"Bank Transfer",Unknown,1
+2023,11,Card,Japan,8
+2023,11,Card,Philippines,11
+2023,11,Card,Singapore,9
+2023,11,Card,"United States",15
+2023,11,Card,Unknown,3
+2023,11,Cash,Japan,3
+2023,11,Cash,Philippines,7
+2023,11,Cash,Singapore,6
+2023,11,Cash,"United States",5
+2023,11,Cash,Unknown,2
+2023,11,E-Wallet,Japan,5
+2023,11,E-Wallet,Philippines,17
+2023,11,E-Wallet,Singapore,5
+2023,11,E-Wallet,"United States",10
+2023,11,E-Wallet,Unknown,5
+2023,11,Unknown,Japan,2
+2023,11,Unknown,Philippines,4
+2023,11,Unknown,Singapore,4
+2023,11,Unknown,"United States",2
+2023,11,Unknown,Unknown,2
+2023,12,"Bank Transfer",Japan,1
+2023,12,"Bank Transfer",Philippines,4
+2023,12,"Bank Transfer",Singapore,1
+2023,12,"Bank Transfer","United States",4
+2023,12,"Bank Transfer",Unknown,2
+2023,12,Card,Japan,11
+2023,12,Card,Philippines,19
+2023,12,Card,Singapore,9
+2023,12,Card,"United States",7
+2023,12,Card,Unknown,5
+2023,12,Cash,Japan,5
+2023,12,Cash,Philippines,6
+2023,12,Cash,Singapore,6
+2023,12,Cash,"United States",12
+2023,12,Cash,Unknown,3
+2023,12,E-Wallet,Japan,5
+2023,12,E-Wallet,Philippines,10
+2023,12,E-Wallet,Singapore,4
+2023,12,E-Wallet,"United States",8
+2023,12,E-Wallet,Unknown,4
+2023,12,Unknown,Japan,3
+2023,12,Unknown,Philippines,2
+2023,12,Unknown,Singapore,1
+2023,12,Unknown,"United States",3
+2024,1,"Bank Transfer",Japan,2
+2024,1,"Bank Transfer",Philippines,1
+2024,1,"Bank Transfer",Singapore,3
+2024,1,"Bank Transfer","United States",7
+2024,1,Card,Japan,9
+2024,1,Card,Philippines,20
+2024,1,Card,Singapore,5
+2024,1,Card,"United States",16
+2024,1,Card,Unknown,6
+2024,1,Cash,Japan,7
+2024,1,Cash,Philippines,7
+2024,1,Cash,Singapore,3
+2024,1,Cash,"United States",4
+2024,1,E-Wallet,Japan,7
+2024,1,E-Wallet,Philippines,15
+2024,1,E-Wallet,Singapore,4
+2024,1,E-Wallet,"United States",11
+2024,1,E-Wallet,Unknown,4
+2024,1,Unknown,Japan,2
+2024,1,Unknown,Philippines,3
+2024,1,Unknown,Singapore,3
+2024,1,Unknown,"United States",2
+2024,2,"Bank Transfer",Japan,1
+2024,2,"Bank Transfer",Philippines,7
+2024,2,"Bank Transfer",Singapore,3
+2024,2,"Bank Transfer","United States",3
+2024,2,Card,Japan,10
+2024,2,Card,Philippines,14
+2024,2,Card,Singapore,15
+2024,2,Card,"United States",13
+2024,2,Card,Unknown,3
+2024,2,Cash,Japan,6
+2024,2,Cash,Philippines,6
+2024,2,Cash,Singapore,2
+2024,2,Cash,"United States",9
+2024,2,E-Wallet,Japan,2
+2024,2,E-Wallet,Philippines,19
+2024,2,E-Wallet,Singapore,3
+2024,2,E-Wallet,"United States",9
+2024,2,E-Wallet,Unknown,7
+2024,2,Unknown,Japan,1
+2024,2,Unknown,Philippines,2
+2024,2,Unknown,Singapore,2
+2024,2,Unknown,"United States",2
+2024,2,Unknown,Unknown,1
+2024,3,"Bank Transfer",Japan,3
+2024,3,"Bank Transfer",Philippines,1
+2024,3,"Bank Transfer",Singapore,4
+2024,3,"Bank Transfer","United States",3
+2024,3,Card,Japan,9
+2024,3,Card,Philippines,17
+2024,3,Card,Singapore,7
+2024,3,Card,"United States",12
+2024,3,Card,Unknown,5
+2024,3,Cash,Japan,5
+2024,3,Cash,Philippines,11
+2024,3,Cash,Singapore,5
+2024,3,Cash,"United States",10
+2024,3,Cash,Unknown,3
+2024,3,E-Wallet,Japan,13
+2024,3,E-Wallet,Philippines,11
+2024,3,E-Wallet,Singapore,5
+2024,3,E-Wallet,"United States",9
+2024,3,E-Wallet,Unknown,11
+2024,3,Unknown,Japan,3
+2024,3,Unknown,Philippines,9
+2024,3,Unknown,Singapore,4
+2024,3,Unknown,"United States",2
+2024,3,Unknown,Unknown,4
+2024,4,"Bank Transfer",Philippines,2
+2024,4,"Bank Transfer",Singapore,1
+2024,4,"Bank Transfer","United States",3
+2024,4,"Bank Transfer",Unknown,1
+2024,4,Card,Japan,7
+2024,4,Card,Philippines,19
+2024,4,Card,Singapore,8
+2024,4,Card,"United States",7
+2024,4,Card,Unknown,6
+2024,4,Cash,Japan,2
+2024,4,Cash,Philippines,7
+2024,4,Cash,Singapore,5
+2024,4,Cash,"United States",8
+2024,4,Cash,Unknown,2
+2024,4,E-Wallet,Japan,7
+2024,4,E-Wallet,Philippines,10
+2024,4,E-Wallet,Singapore,5
+2024,4,E-Wallet,"United States",11
+2024,4,E-Wallet,Unknown,3
+2024,4,Unknown,Philippines,5
+2024,4,Unknown,Singapore,1
+2024,4,Unknown,"United States",3
+2024,4,Unknown,Unknown,2
+2024,5,"Bank Transfer",Japan,2
+2024,5,"Bank Transfer",Philippines,5
+2024,5,"Bank Transfer",Singapore,3
+2024,5,"Bank Transfer","United States",2
+2024,5,Card,Japan,13
+2024,5,Card,Philippines,13
+2024,5,Card,Singapore,4
+2024,5,Card,"United States",17
+2024,5,Card,Unknown,2
+2024,5,Cash,Japan,5
+2024,5,Cash,Philippines,7
+2024,5,Cash,Singapore,5
+2024,5,Cash,"United States",6
+2024,5,E-Wallet,Japan,3
+2024,5,E-Wallet,Philippines,11
+2024,5,E-Wallet,Singapore,4
+2024,5,E-Wallet,"United States",11
+2024,5,E-Wallet,Unknown,8
+2024,5,Unknown,Japan,2
+2024,5,Unknown,Philippines,4
+2024,5,Unknown,"United States",3
+2024,5,Unknown,Unknown,1
+2024,6,"Bank Transfer",Japan,2
+2024,6,"Bank Transfer",Philippines,1
+2024,6,"Bank Transfer",Singapore,5
+2024,6,"Bank Transfer","United States",5
+2024,6,"Bank Transfer",Unknown,1
+2024,6,Card,Japan,11
+2024,6,Card,Philippines,21
+2024,6,Card,Singapore,14
+2024,6,Card,"United States",17
+2024,6,Card,Unknown,2
+2024,6,Cash,Japan,4
+2024,6,Cash,Philippines,10
+2024,6,Cash,Singapore,8
+2024,6,Cash,"United States",7
+2024,6,Cash,Unknown,3
+2024,6,E-Wallet,Japan,6
+2024,6,E-Wallet,Philippines,17
+2024,6,E-Wallet,Singapore,2
+2024,6,E-Wallet,"United States",13
+2024,6,E-Wallet,Unknown,3
+2024,6,Unknown,Japan,3
+2024,6,Unknown,Philippines,4
+2024,6,Unknown,Singapore,1
+2024,6,Unknown,"United States",4
+2024,6,Unknown,Unknown,2
+2024,7,"Bank Transfer",Japan,1
+2024,7,"Bank Transfer",Philippines,5
+2024,7,"Bank Transfer","United States",1
+2024,7,"Bank Transfer",Unknown,1
+2024,7,Card,Japan,11
+2024,7,Card,Philippines,19
+2024,7,Card,Singapore,14
+2024,7,Card,"United States",10
+2024,7,Card,Unknown,1
+2024,7,Cash,Japan,5
+2024,7,Cash,Philippines,10
+2024,7,Cash,Singapore,2
+2024,7,Cash,"United States",4
+2024,7,E-Wallet,Japan,7
+2024,7,E-Wallet,Philippines,14
+2024,7,E-Wallet,Singapore,10
+2024,7,E-Wallet,"United States",9
+2024,7,E-Wallet,Unknown,8
+2024,7,Unknown,Japan,4
+2024,7,Unknown,Philippines,3
+2024,7,Unknown,Singapore,2
+2024,7,Unknown,"United States",5
+2024,7,Unknown,Unknown,1
+2024,8,"Bank Transfer",Japan,3
+2024,8,"Bank Transfer",Philippines,2
+2024,8,"Bank Transfer",Singapore,5
+2024,8,"Bank Transfer","United States",1
+2024,8,"Bank Transfer",Unknown,1
+2024,8,Card,Japan,12
+2024,8,Card,Philippines,18
+2024,8,Card,Singapore,6
+2024,8,Card,"United States",9
+2024,8,Card,Unknown,7
+2024,8,Cash,Japan,8
+2024,8,Cash,Philippines,11
+2024,8,Cash,Singapore,1
+2024,8,Cash,"United States",7
+2024,8,Cash,Unknown,1
+2024,8,E-Wallet,Japan,3
+2024,8,E-Wallet,Philippines,14
+2024,8,E-Wallet,Singapore,2
+2024,8,E-Wallet,"United States",10
+2024,8,E-Wallet,Unknown,1
+2024,8,Unknown,Japan,1
+2024,8,Unknown,Philippines,5
+2024,8,Unknown,Singapore,1
+2024,9,"Bank Transfer",Japan,2
+2024,9,"Bank Transfer",Philippines,6
+2024,9,"Bank Transfer","United States",2
+2024,9,"Bank Transfer",Unknown,1
+2024,9,Card,Japan,6
+2024,9,Card,Philippines,21
+2024,9,Card,Singapore,9
+2024,9,Card,"United States",16
+2024,9,Card,Unknown,3
+2024,9,Cash,Japan,3
+2024,9,Cash,Philippines,6
+2024,9,Cash,Singapore,6
+2024,9,Cash,"United States",5
+2024,9,Cash,Unknown,1
+2024,9,E-Wallet,Japan,5
+2024,9,E-Wallet,Philippines,13
+2024,9,E-Wallet,Singapore,5
+2024,9,E-Wallet,"United States",7
+2024,9,E-Wallet,Unknown,2
+2024,9,Unknown,Philippines,6
+2024,9,Unknown,Singapore,1
+2024,9,Unknown,"United States",4
+2024,9,Unknown,Unknown,3
+2024,10,"Bank Transfer",Japan,1
+2024,10,"Bank Transfer",Philippines,3
+2024,10,"Bank Transfer","United States",4
+2024,10,Card,Japan,6
+2024,10,Card,Philippines,26
+2024,10,Card,Singapore,3
+2024,10,Card,"United States",13
+2024,10,Card,Unknown,4
+2024,10,Cash,Japan,4
+2024,10,Cash,Philippines,2
+2024,10,Cash,Singapore,4
+2024,10,Cash,"United States",4
+2024,10,Cash,Unknown,1
+2024,10,E-Wallet,Japan,10
+2024,10,E-Wallet,Philippines,8
+2024,10,E-Wallet,Singapore,4
+2024,10,E-Wallet,"United States",17
+2024,10,E-Wallet,Unknown,5
+2024,10,Unknown,Japan,1
+2024,10,Unknown,Philippines,2
+2024,10,Unknown,Singapore,2
+2024,10,Unknown,"United States",1
+2024,10,Unknown,Unknown,1
+2024,11,"Bank Transfer",Japan,2
+2024,11,"Bank Transfer",Philippines,5
+2024,11,"Bank Transfer",Singapore,1
+2024,11,"Bank Transfer","United States",3
+2024,11,"Bank Transfer",Unknown,5
+2024,11,Card,Japan,9
+2024,11,Card,Philippines,10
+2024,11,Card,Singapore,5
+2024,11,Card,"United States",14
+2024,11,Card,Unknown,9
+2024,11,Cash,Japan,2
+2024,11,Cash,Philippines,10
+2024,11,Cash,Singapore,1
+2024,11,Cash,"United States",2
+2024,11,Cash,Unknown,3
+2024,11,E-Wallet,Japan,4
+2024,11,E-Wallet,Philippines,6
+2024,11,E-Wallet,Singapore,4
+2024,11,E-Wallet,"United States",7
+2024,11,E-Wallet,Unknown,2
+2024,11,Unknown,Japan,4
+2024,11,Unknown,Philippines,4
+2024,11,Unknown,Singapore,1
+2024,11,Unknown,"United States",3
+2024,12,"Bank Transfer",Japan,5
+2024,12,"Bank Transfer",Philippines,4
+2024,12,"Bank Transfer",Singapore,1
+2024,12,"Bank Transfer","United States",4
+2024,12,"Bank Transfer",Unknown,1
+2024,12,Card,Japan,6
+2024,12,Card,Philippines,14
+2024,12,Card,Singapore,4
+2024,12,Card,"United States",16
+2024,12,Card,Unknown,4
+2024,12,Cash,Japan,4
+2024,12,Cash,Philippines,12
+2024,12,Cash,Singapore,4
+2024,12,Cash,"United States",8
+2024,12,Cash,Unknown,2
+2024,12,E-Wallet,Japan,1
+2024,12,E-Wallet,Philippines,12
+2024,12,E-Wallet,Singapore,11
+2024,12,E-Wallet,"United States",13
+2024,12,E-Wallet,Unknown,2
+2024,12,Unknown,Japan,2
+2024,12,Unknown,Philippines,6
+2024,12,Unknown,Singapore,3
+2024,12,Unknown,"United States",5
+2025,1,"Bank Transfer",Japan,1
+2025,1,"Bank Transfer",Philippines,3
+2025,1,"Bank Transfer",Singapore,1
+2025,1,"Bank Transfer","United States",1
+2025,1,Card,Japan,7
+2025,1,Card,Philippines,18
+2025,1,Card,Singapore,9
+2025,1,Card,"United States",17
+2025,1,Card,Unknown,4
+2025,1,Cash,Japan,2
+2025,1,Cash,Philippines,6
+2025,1,Cash,Singapore,4
+2025,1,Cash,"United States",5
+2025,1,Cash,Unknown,3
+2025,1,E-Wallet,Japan,8
+2025,1,E-Wallet,Philippines,18
+2025,1,E-Wallet,Singapore,5
+2025,1,E-Wallet,"United States",14
+2025,1,E-Wallet,Unknown,6
+2025,1,Unknown,Philippines,2
+2025,1,Unknown,Singapore,6
+2025,1,Unknown,"United States",1
+2025,2,"Bank Transfer",Japan,2
+2025,2,"Bank Transfer",Philippines,8
+2025,2,"Bank Transfer",Singapore,2
+2025,2,"Bank Transfer","United States",1
+2025,2,"Bank Transfer",Unknown,1
+2025,2,Card,Japan,1
+2025,2,Card,Philippines,12
+2025,2,Card,Singapore,9
+2025,2,Card,"United States",16
+2025,2,Card,Unknown,2
+2025,2,Cash,Japan,4
+2025,2,Cash,Philippines,11
+2025,2,Cash,Singapore,5
+2025,2,Cash,"United States",2
+2025,2,Cash,Unknown,1
+2025,2,E-Wallet,Japan,1
+2025,2,E-Wallet,Philippines,12
+2025,2,E-Wallet,Singapore,10
+2025,2,E-Wallet,"United States",5
+2025,2,E-Wallet,Unknown,2
+2025,2,Unknown,Philippines,8
+2025,2,Unknown,Singapore,1
+2025,2,Unknown,"United States",2
+2025,2,Unknown,Unknown,2
+2025,3,"Bank Transfer",Japan,2
+2025,3,"Bank Transfer",Philippines,4
+2025,3,"Bank Transfer","United States",3
+2025,3,"Bank Transfer",Unknown,1
+2025,3,Card,Japan,6
+2025,3,Card,Philippines,21
+2025,3,Card,Singapore,9
+2025,3,Card,"United States",16
+2025,3,Card,Unknown,5
+2025,3,Cash,Japan,2
+2025,3,Cash,Philippines,4
+2025,3,Cash,Singapore,2
+2025,3,Cash,"United States",7
+2025,3,Cash,Unknown,1
+2025,3,E-Wallet,Japan,6
+2025,3,E-Wallet,Philippines,15
+2025,3,E-Wallet,Singapore,7
+2025,3,E-Wallet,"United States",5
+2025,3,E-Wallet,Unknown,6
+2025,3,Unknown,Japan,1
+2025,3,Unknown,Philippines,4
+2025,3,Unknown,Singapore,2
+2025,3,Unknown,"United States",1
+2025,4,"Bank Transfer",Japan,1
+2025,4,"Bank Transfer",Philippines,4
+2025,4,"Bank Transfer",Singapore,3
+2025,4,"Bank Transfer","United States",1
+2025,4,"Bank Transfer",Unknown,2
+2025,4,Card,Japan,9
+2025,4,Card,Philippines,21
+2025,4,Card,Singapore,12
+2025,4,Card,"United States",16
+2025,4,Card,Unknown,4
+2025,4,Cash,Japan,5
+2025,4,Cash,Philippines,6
+2025,4,Cash,Singapore,3
+2025,4,Cash,"United States",4
+2025,4,E-Wallet,Japan,6
+2025,4,E-Wallet,Philippines,13
+2025,4,E-Wallet,Singapore,8
+2025,4,E-Wallet,"United States",14
+2025,4,E-Wallet,Unknown,1
+2025,4,Unknown,Japan,3
+2025,4,Unknown,Philippines,6
+2025,4,Unknown,Singapore,3
+2025,4,Unknown,"United States",2
+2025,5,"Bank Transfer",Japan,4
+2025,5,"Bank Transfer",Philippines,5
+2025,5,"Bank Transfer",Singapore,3
+2025,5,"Bank Transfer",Unknown,3
+2025,5,Card,Japan,10
+2025,5,Card,Philippines,16
+2025,5,Card,Singapore,11
+2025,5,Card,"United States",13
+2025,5,Card,Unknown,1
+2025,5,Cash,Japan,8
+2025,5,Cash,Philippines,2
+2025,5,Cash,Singapore,6
+2025,5,Cash,"United States",4
+2025,5,Cash,Unknown,3
+2025,5,E-Wallet,Japan,11
+2025,5,E-Wallet,Philippines,14
+2025,5,E-Wallet,Singapore,8
+2025,5,E-Wallet,"United States",6
+2025,5,E-Wallet,Unknown,3
+2025,5,Unknown,Japan,4
+2025,5,Unknown,Philippines,1
+2025,5,Unknown,Singapore,4
+2025,5,Unknown,"United States",8
+2025,5,Unknown,Unknown,2
+2025,6,"Bank Transfer",Japan,3
+2025,6,"Bank Transfer",Philippines,5
+2025,6,"Bank Transfer",Singapore,2
+2025,6,"Bank Transfer","United States",5
+2025,6,"Bank Transfer",Unknown,1
+2025,6,Card,Japan,9
+2025,6,Card,Philippines,19
+2025,6,Card,Singapore,9
+2025,6,Card,"United States",13
+2025,6,Card,Unknown,2
+2025,6,Cash,Japan,7
+2025,6,Cash,Philippines,6
+2025,6,Cash,Singapore,8
+2025,6,Cash,"United States",8
+2025,6,Cash,Unknown,1
+2025,6,E-Wallet,Japan,11
+2025,6,E-Wallet,Philippines,11
+2025,6,E-Wallet,Singapore,6
+2025,6,E-Wallet,"United States",14
+2025,6,E-Wallet,Unknown,3
+2025,6,Unknown,Japan,3
+2025,6,Unknown,Philippines,4
+2025,6,Unknown,Singapore,1
+2025,6,Unknown,"United States",3
+2025,6,Unknown,Unknown,1
+2025,7,"Bank Transfer",Japan,2
+2025,7,"Bank Transfer",Philippines,7
+2025,7,"Bank Transfer",Singapore,1
+2025,7,"Bank Transfer","United States",3
+2025,7,"Bank Transfer",Unknown,1
+2025,7,Card,Japan,7
+2025,7,Card,Philippines,18
+2025,7,Card,Singapore,13
+2025,7,Card,"United States",21
+2025,7,Card,Unknown,2
+2025,7,Cash,Japan,2
+2025,7,Cash,Philippines,9
+2025,7,Cash,Singapore,1
+2025,7,Cash,"United States",8
+2025,7,Cash,Unknown,2
+2025,7,E-Wallet,Japan,6
+2025,7,E-Wallet,Philippines,13
+2025,7,E-Wallet,Singapore,5
+2025,7,E-Wallet,"United States",11
+2025,7,E-Wallet,Unknown,7
+2025,7,Unknown,Japan,1
+2025,7,Unknown,Philippines,6
+2025,7,Unknown,"United States",3
+2025,7,Unknown,Unknown,1
+2025,8,"Bank Transfer",Japan,2
+2025,8,"Bank Transfer",Philippines,9
+2025,8,"Bank Transfer",Singapore,4
+2025,8,"Bank Transfer","United States",6
+2025,8,"Bank Transfer",Unknown,1
+2025,8,Card,Japan,10
+2025,8,Card,Philippines,21
+2025,8,Card,Singapore,9
+2025,8,Card,"United States",13
+2025,8,Card,Unknown,2
+2025,8,Cash,Japan,4
+2025,8,Cash,Philippines,6
+2025,8,Cash,Singapore,6
+2025,8,Cash,"United States",6
+2025,8,Cash,Unknown,2
+2025,8,E-Wallet,Japan,12
+2025,8,E-Wallet,Philippines,8
+2025,8,E-Wallet,Singapore,5
+2025,8,E-Wallet,"United States",15
+2025,8,E-Wallet,Unknown,2
+2025,8,Unknown,Japan,3
+2025,8,Unknown,Philippines,6
+2025,8,Unknown,Singapore,5
+2025,8,Unknown,"United States",5
+2025,8,Unknown,Unknown,1
+2025,9,"Bank Transfer",Japan,1
+2025,9,"Bank Transfer",Philippines,5
+2025,9,"Bank Transfer",Singapore,2
+2025,9,"Bank Transfer","United States",3
+2025,9,"Bank Transfer",Unknown,1
+2025,9,Card,Japan,5
+2025,9,Card,Philippines,18
+2025,9,Card,Singapore,8
+2025,9,Card,"United States",17
+2025,9,Card,Unknown,2
+2025,9,Cash,Japan,6
+2025,9,Cash,Philippines,2
+2025,9,Cash,Singapore,7
+2025,9,Cash,"United States",5
+2025,9,E-Wallet,Japan,9
+2025,9,E-Wallet,Philippines,9
+2025,9,E-Wallet,Singapore,5
+2025,9,E-Wallet,"United States",4
+2025,9,E-Wallet,Unknown,3
+2025,9,Unknown,Japan,1
+2025,9,Unknown,Philippines,2
+2025,9,Unknown,Singapore,2
+2025,9,Unknown,"United States",1
+2025,9,Unknown,Unknown,1
+2025,10,"Bank Transfer",Japan,1
+2025,10,"Bank Transfer",Philippines,1
+2025,10,"Bank Transfer","United States",5
+2025,10,"Bank Transfer",Unknown,1
+2025,10,Card,Japan,11
+2025,10,Card,Philippines,23
+2025,10,Card,Singapore,7
+2025,10,Card,"United States",15
+2025,10,Card,Unknown,3
+2025,10,Cash,Japan,2
+2025,10,Cash,Philippines,7
+2025,10,Cash,Singapore,1
+2025,10,Cash,"United States",8
+2025,10,Cash,Unknown,1
+2025,10,E-Wallet,Japan,12
+2025,10,E-Wallet,Philippines,10
+2025,10,E-Wallet,Singapore,6
+2025,10,E-Wallet,"United States",10
+2025,10,E-Wallet,Unknown,2
+2025,10,Unknown,Philippines,2
+2025,10,Unknown,Singapore,2
+2025,10,Unknown,"United States",3
+2025,11,"Bank Transfer",Japan,6
+2025,11,"Bank Transfer",Philippines,6
+2025,11,"Bank Transfer",Singapore,3
+2025,11,"Bank Transfer","United States",4
+2025,11,"Bank Transfer",Unknown,1
+2025,11,Card,Japan,8
+2025,11,Card,Philippines,10
+2025,11,Card,Singapore,11
+2025,11,Card,"United States",16
+2025,11,Card,Unknown,3
+2025,11,Cash,Japan,4
+2025,11,Cash,Philippines,11
+2025,11,Cash,Singapore,5
+2025,11,Cash,"United States",9
+2025,11,Cash,Unknown,1
+2025,11,E-Wallet,Japan,13
+2025,11,E-Wallet,Philippines,8
+2025,11,E-Wallet,Singapore,3
+2025,11,E-Wallet,"United States",6
+2025,11,E-Wallet,Unknown,2
+2025,11,Unknown,Japan,1
+2025,11,Unknown,Philippines,5
+2025,11,Unknown,Singapore,1
+2025,11,Unknown,"United States",5
+2025,11,Unknown,Unknown,2
+2025,12,"Bank Transfer",Japan,2
+2025,12,"Bank Transfer",Philippines,5
+2025,12,"Bank Transfer",Singapore,6
+2025,12,"Bank Transfer","United States",6
+2025,12,"Bank Transfer",Unknown,1
+2025,12,Card,Japan,15
+2025,12,Card,Philippines,17
+2025,12,Card,Singapore,9
+2025,12,Card,"United States",15
+2025,12,Card,Unknown,4
+2025,12,Cash,Japan,4
+2025,12,Cash,Philippines,12
+2025,12,Cash,Singapore,2
+2025,12,Cash,"United States",6
+2025,12,Cash,Unknown,2
+2025,12,E-Wallet,Japan,6
+2025,12,E-Wallet,Philippines,14
+2025,12,E-Wallet,Singapore,6
+2025,12,E-Wallet,"United States",5
+2025,12,E-Wallet,Unknown,3
+2025,12,Unknown,Japan,6
+2025,12,Unknown,Philippines,5
+2025,12,Unknown,Singapore,2
+2025,12,Unknown,"United States",1
+2026,1,"Bank Transfer",Japan,1
+2026,1,"Bank Transfer",Philippines,7
+2026,1,"Bank Transfer",Singapore,1
+2026,1,"Bank Transfer",Unknown,1
+2026,1,Card,Japan,6
+2026,1,Card,Philippines,16
+2026,1,Card,Singapore,7
+2026,1,Card,"United States",11
+2026,1,Card,Unknown,10
+2026,1,Cash,Japan,6
+2026,1,Cash,Philippines,8
+2026,1,Cash,"United States",7
+2026,1,E-Wallet,Japan,4
+2026,1,E-Wallet,Philippines,16
+2026,1,E-Wallet,Singapore,3
+2026,1,E-Wallet,"United States",6
+2026,1,E-Wallet,Unknown,4
+2026,1,Unknown,Japan,4
+2026,1,Unknown,Philippines,7
+2026,1,Unknown,"United States",5
+2026,1,Unknown,Unknown,3
+2026,2,"Bank Transfer",Japan,1
+2026,2,"Bank Transfer",Philippines,6
+2026,2,"Bank Transfer",Singapore,2
+2026,2,"Bank Transfer","United States",5
+2026,2,"Bank Transfer",Unknown,2
+2026,2,Card,Japan,7
+2026,2,Card,Philippines,16
+2026,2,Card,Singapore,10
+2026,2,Card,"United States",15
+2026,2,Card,Unknown,1
+2026,2,Cash,Japan,4
+2026,2,Cash,Philippines,7
+2026,2,Cash,Singapore,3
+2026,2,Cash,"United States",7
+2026,2,Cash,Unknown,1
+2026,2,E-Wallet,Japan,5
+2026,2,E-Wallet,Philippines,14
+2026,2,E-Wallet,Singapore,11
+2026,2,E-Wallet,"United States",11
+2026,2,E-Wallet,Unknown,5
+2026,2,Unknown,Japan,2
+2026,2,Unknown,Philippines,7
+2026,2,Unknown,Singapore,3
+2026,2,Unknown,"United States",2
+2026,3,"Bank Transfer",Japan,1
+2026,3,"Bank Transfer",Philippines,2
+2026,3,"Bank Transfer",Singapore,3
+2026,3,"Bank Transfer",Unknown,1
+2026,3,Card,Japan,8
+2026,3,Card,Philippines,16
+2026,3,Card,Singapore,10
+2026,3,Card,"United States",19
+2026,3,Card,Unknown,6
+2026,3,Cash,Japan,8
+2026,3,Cash,Philippines,15
+2026,3,Cash,Singapore,5
+2026,3,Cash,"United States",8
+2026,3,Cash,Unknown,2
+2026,3,E-Wallet,Japan,4
+2026,3,E-Wallet,Philippines,19
+2026,3,E-Wallet,Singapore,7
+2026,3,E-Wallet,"United States",15
+2026,3,E-Wallet,Unknown,4
+2026,3,Unknown,Japan,3
+2026,3,Unknown,Philippines,5
+2026,3,Unknown,Singapore,2
+2026,3,Unknown,"United States",3
+2026,3,Unknown,Unknown,4
+2026,4,"Bank Transfer",Japan,3
+2026,4,"Bank Transfer",Philippines,3
+2026,4,"Bank Transfer",Singapore,4
+2026,4,"Bank Transfer","United States",2
+2026,4,"Bank Transfer",Unknown,3
+2026,4,Card,Japan,17
+2026,4,Card,Philippines,8
+2026,4,Card,Singapore,10
+2026,4,Card,"United States",11
+2026,4,Card,Unknown,4
+2026,4,Cash,Japan,5
+2026,4,Cash,Philippines,7
+2026,4,Cash,Singapore,6
+2026,4,Cash,"United States",9
+2026,4,Cash,Unknown,2
+2026,4,E-Wallet,Japan,13
+2026,4,E-Wallet,Philippines,14
+2026,4,E-Wallet,Singapore,2
+2026,4,E-Wallet,"United States",9
+2026,4,E-Wallet,Unknown,2
+2026,4,Unknown,Japan,1
+2026,4,Unknown,Philippines,4
+2026,4,Unknown,Singapore,3
+2026,4,Unknown,"United States",4
+2026,4,Unknown,Unknown,3
+2026,5,"Bank Transfer",Japan,4
+2026,5,"Bank Transfer",Philippines,1
+2026,5,"Bank Transfer",Singapore,4
+2026,5,"Bank Transfer","United States",3
+2026,5,"Bank Transfer",Unknown,1
+2026,5,Card,Japan,9
+2026,5,Card,Philippines,9
+2026,5,Card,Singapore,5
+2026,5,Card,"United States",7
+2026,5,Card,Unknown,2
+2026,5,Cash,Japan,4
+2026,5,Cash,Philippines,11
+2026,5,Cash,Singapore,3
+2026,5,Cash,"United States",5
+2026,5,Cash,Unknown,4
+2026,5,E-Wallet,Japan,5
+2026,5,E-Wallet,Philippines,15
+2026,5,E-Wallet,Singapore,5
+2026,5,E-Wallet,"United States",10
+2026,5,E-Wallet,Unknown,5
+2026,5,Unknown,Japan,1
+2026,5,Unknown,Philippines,2
+2026,5,Unknown,Singapore,3
+2026,5,Unknown,"United States",2
+2026,6,"Bank Transfer",Japan,4
+2026,6,"Bank Transfer",Philippines,3
+2026,6,"Bank Transfer","United States",5
+2026,6,"Bank Transfer",Unknown,3
+2026,6,Card,Japan,17
+2026,6,Card,Philippines,14
+2026,6,Card,Singapore,12
+2026,6,Card,"United States",16
+2026,6,Card,Unknown,5
+2026,6,Cash,Japan,5
+2026,6,Cash,Philippines,6
+2026,6,Cash,Singapore,3
+2026,6,Cash,"United States",8
+2026,6,Cash,Unknown,2
+2026,6,E-Wallet,Japan,6
+2026,6,E-Wallet,Philippines,13
+2026,6,E-Wallet,Singapore,9
+2026,6,E-Wallet,"United States",5
+2026,6,E-Wallet,Unknown,2
+2026,6,Unknown,Japan,3
+2026,6,Unknown,Philippines,4
+2026,6,Unknown,Singapore,1
+2026,6,Unknown,"United States",5
+2026,6,Unknown,Unknown,2

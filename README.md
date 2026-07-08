@@ -1,1 +1,125 @@
-# Fintech Transactions Analysis
+# Fintech Transaction Analytics — SQL & Power BI Project
+
+## Overview
+
+This project analyzes a synthetic fintech transactions dataset (~6,100 rows) designed to simulate the kind of messy, real-world data a data analyst typically encounters — inconsistent formatting, missing values, duplicate records, mixed currencies, and statistical outliers. The goal was to build a full analytics pipeline end-to-end: import raw data, clean and standardize it using SQL, and answer four business questions through a multi-page Power BI dashboard.
+
+**Tools used:** MySQL / MySQL Workbench (data cleaning, transformation, analysis), Power BI (dashboard and visualization).
+
+**Business questions answered:**
+1. Revenue & refund leakage — What's net revenue by month, and what's the total revenue vs. refund by merchant category?
+2. Customer segmentation — Which customers are high-value vs. dormant (RFM: recency, frequency, monetary)?
+3. Fraud pattern detection — What transaction characteristics (amount size, payment method, country) correlate with flagged fraud?
+4. Payment method & channel trends — How has e-wallet usage shifted vs. cards/bank transfer over time, and does it vary by country?
+
+---
+
+## Data Cleaning Process
+
+### 1. Raw import
+
+The raw CSV was imported into a staging table (`fintech_transactions`) with every column typed as `VARCHAR`, regardless of what the data represented (dates, amounts, flags). This was a deliberate choice — importing directly into strict types (e.g., `DECIMAL` for amount, `DATE` for transaction date) would have caused rows to be rejected or silently truncated, since the raw data contained multiple formats and non-numeric placeholders. Keeping everything as text at import time meant no data was lost before cleaning began.
+
+### 2. Country standardization
+
+An initial pass standardized inconsistent country values (`PH`, `PHL`, `Philippines` → `Philippines`; similar treatment for `US`/`USA`, `JP`, `SG`) using `TRIM()` and `IN()` matching.
+
+### 3. Building the cleaned table
+
+A single `CREATE TABLE ... AS SELECT` was used to produce `clean_transactions`, applying a `CASE WHEN` or equivalent transformation to every column:
+
+- **Dates (`transaction_date`, `signup_date`):** The raw data contained six different date formats (e.g., `2025-07-04`, `07/04/2025`, `July 04, 2025`, `2025/07/04 14:30`). Initial attempts using `COALESCE()` with multiple `STR_TO_DATE()` calls worked in principle, but triggered strict-mode datetime errors when a format didn't match. This was resolved by switching to `REGEXP` pattern-matching to first identify which format a given value was in, then applying only the matching `STR_TO_DATE()` conversion — avoiding invalid parse attempts entirely rather than relying on silent failure.
+- **Amount:** Currency symbols (₱) and thousands separators (commas) were stripped, blank/`"N/A"` values were converted to `NULL` via nested `NULLIF()`, and the result was cast to `DECIMAL(12,2)`. An early version of this column mixed numeric values with the placeholder text `'Unknown'` for missing entries — this was identified as a bug, since a column containing both numbers and text cannot be used in `SUM()`/`AVG()` correctly. The fix was to keep missing amounts as `NULL` (which SQL aggregate functions correctly skip) rather than as descriptive text.
+- **Names:** Split into `first_name` and `last_name` using `SUBSTRING_INDEX()`.
+- **Currency:** Initially cleaned by standardizing casing/typos in the existing `currency` column. It was later realized that currency and country were independent, randomly generated fields in this dataset — not logically linked — so a currency-follows-country rule was applied as a deliberate assumption rather than a discovered pattern, and is called out as such rather than presented as a verified relationship in the data.
+- **Categorical columns** (`transaction_type`, `merchant_category`, `payment_method`, `issuing_bank`, `status`, `fraud_flag`): Standardized casing and known variants (e.g., `othr`/`Others` → `Other`, `e-wallet` → `E-Wallet`), with missing/blank values explicitly labeled `'Unknown'` rather than guessed or silently dropped.
+- **Account balance:** Same numeric-NULL handling as amount, cast to `DECIMAL(12,2)`.
+
+### 4. Duplicate detection and removal
+
+A check for duplicate `transaction_id`s revealed two distinct issues:
+- **Exact duplicate rows** — the same transaction fully repeated, likely a data entry/import artifact.
+- **Conflicting duplicates** — the same `transaction_id` appearing with different amounts on the same date, a genuine data integrity problem with no way to determine which value was correct after the fact.
+
+Both were resolved using `ROW_NUMBER() OVER (PARTITION BY transaction_id ORDER BY transaction_date)`, keeping only the first occurrence per ID and discarding the rest. This is noted as a limitation: for the small number of genuinely conflicting records, the retained value was chosen arbitrarily (earliest by date), not verified as correct.
+
+### 5. Currency mixing — a key realization
+
+Midway through analysis, it became clear that `amount` values were being summed across four different currencies (PHP, USD, SGD, JPY) without conversion — meaning early revenue totals were mathematically meaningless (a peso amount and a dollar amount are not the same unit and cannot simply be added together). This was corrected by creating `clean_transactions_php`, converting every transaction to a common PHP baseline using fixed exchange rates. These rates are stated as an illustrative assumption for this project, not real-time or historically accurate figures.
+
+### 6. Outlier detection
+
+Using both the IQR method and the mean ± 3 standard deviations method, a meaningful share of transactions (roughly 13% by one measure) were identified as statistical outliers — some reaching over ₱300,000 against a typical transaction size in the hundreds to low thousands of pesos. Investigation of individual outlier rows (e.g., a ₱304,232 "purchase" with an unknown merchant category and a failed status) showed the evidence was ambiguous rather than conclusively fraudulent or conclusively legitimate — a case explicitly treated as inconclusive rather than resolved either way.
+
+An important distinction was made between two uses of this same information:
+- For **revenue/refund reporting**, extreme outliers were excluded to avoid a small number of erroneous or synthetic values distorting otherwise typical totals.
+- For **fraud analysis**, the same outlier transactions were deliberately retained and examined directly, since unusually large transaction size is itself a relevant fraud signal rather than noise to discard. Excluding outliers from fraud analysis would remove exactly the data most relevant to that question.
+
+### 7. Payment method grouping
+
+`GCash`, `PayMaya`, and a generic `E-Wallet` label were initially treated as separate payment methods in the cleaned data. Since the business question asks about e-wallet usage as a category (not individual apps), these were consolidated into a single `E-Wallet` grouping for the payment method trend analysis.
+
+### 8. Handling missing values
+
+Rather than deleting rows with missing data, missing values were preserved and handled according to column type:
+- Categorical columns: labeled `'Unknown'`, treated as their own reportable group.
+- Numeric columns: left as `NULL`, allowing `SUM()`/`AVG()` to correctly exclude them without distorting totals or requiring rows to be dropped.
+
+This decision was made deliberately after considering the cost of dropping rows entirely — a transaction missing one field (e.g., fraud status) still carries valid information in every other column, and removing it would discard usable data for unrelated analyses.
+
+---
+
+## Business Question Findings
+
+### 1. Revenue & Refund Leakage
+
+Net revenue was calculated by month (using the currency-normalized `amount_php` field), separating total revenue (positive amounts) from total refunds (negative amounts). Refund-to-purchase ratio was calculated per merchant category by aggregating across the full dataset (rather than per month per category), since splitting by both dimensions simultaneously produced unstable ratios in categories with low transaction volume in a given month.
+
+*[Insert dashboard screenshot + specific findings: top refund-ratio categories, monthly revenue trend]*
+
+### 2. Customer Segmentation (RFM)
+
+Customers were segmented into **High Value**, **Regular**, and **Dormant** using:
+- **Recency:** days since last transaction (dormant threshold set at 180 days / 6 months, based on common industry ranges of 3–12 months)
+- **Frequency:** total transaction count (High Value threshold: 10+ transactions)
+- **Monetary:** total revenue in PHP (High Value threshold: ₱100,000+)
+
+A customer must meet all three High Value thresholds simultaneously; otherwise, they're classified Dormant (if inactive beyond 180 days) or Regular.
+
+*[Insert dashboard screenshot + specific findings: segment counts, average RFM values per segment]*
+
+**Notable finding:** the segmentation logic is frequency-gated — a customer with very high total revenue but low transaction frequency (i.e., a small number of very large transactions) can be classified as "Regular" rather than "High Value," since the frequency threshold isn't met even though the monetary threshold is far exceeded. This suggests the current thresholds may undervalue infrequent, high-spend customers, and is worth revisiting with adjusted or weighted criteria in a future iteration.
+
+### 3. Fraud Pattern Detection
+
+Fraud patterns were examined across three dimensions: transaction amount (average/min/max by fraud status), payment method (fraud rate per method), and country (fraud rate per country).
+
+*[Insert dashboard screenshot + specific findings: fraud rate leaders by payment method/country, amount comparison]*
+
+**Key limitation:** approximately 23% of transactions had no recorded fraud status (`'Unknown'`). All fraud rate percentages are calculated relative to the full transaction count, meaning true fraud rates among transactions with a *known* status may differ from the reported figures. This is flagged as a data completeness gap rather than resolved by assumption.
+
+### 4. Payment Method & Channel Trends
+
+Payment methods were grouped into three channels — **E-Wallet** (GCash, PayMaya, generic e-wallet), **Card** (credit/debit), and **Bank Transfer** — and tracked by transaction count over time and by country.
+
+*[Insert dashboard screenshot + specific findings: channel shift over time, country-level differences]*
+
+---
+
+## Dashboard Structure
+
+The Power BI report is organized into pages by business question:
+- **Page 1:** Revenue & Refunds — monthly trend, refund ratio by category
+- **Page 2:** Customer Segmentation — segment distribution, RFM averages by segment, top customers
+- **Page 3:** Fraud Pattern Detection — fraud rate by amount, payment method, country
+- **Page 4:** Payment Method & Channel Trends — channel usage over time and by country
+
+---
+
+## Key Assumptions & Limitations
+
+- Exchange rates used for currency conversion are fixed, illustrative values, not real-time or transaction-date-accurate rates.
+- The currency-follows-country logic (used only where currency was missing) is an assumption based on typical real-world behavior, not a pattern verified within this specific dataset, since country and currency were generated independently.
+- Duplicate transaction_id conflicts were resolved by keeping the earliest record; this is an arbitrary tie-break, not a verified correction.
+- Fraud rate calculations include transactions with unknown fraud status in the denominator; interpret percentages with this in mind.
+- One large outlier transaction (₱304,232) was investigated individually and found inconclusive as to whether it represents a data error or a legitimate/fraudulent transaction — flagged for review rather than resolved.

@@ -1,4 +1,14 @@
 # **FINTECH DATA ANALYSIS**
+## Table of Contents
+
+- Introduction
+- Business Questions
+- Data Cleaning Process
+- SQL Queries
+- Findings
+- Recommendations
+- Key Assumptions & Limitations
+
 
 # **I. Introduction**
 Financial technology companies process thousands of digital transactions every day. Hidden within these tranascations are patterns that can help businesses understand customer behavior, identify potential risks, and monitor payment activity to make better business decisions. However, these insights are only valuable if the underlying data is accurate and well prepared.
@@ -241,7 +251,7 @@ In 2025, only Japan managed to have more e wallet usage than card as the rest of
 
 Overall, E-Wallet still has not seen more average use than Card, but it varies by country as seen with Japan and the Philippines' usage overtime.
 
-**V. Recommendations**
+#**V. Recommendations**
 
 **1.)** According to the Total Refund vs. Total Revenue analysis, refunds account for approximately 37% of total revenue. During 2023, 2025, and the first half of 2026, refunds accounted for nearly half of the revenue generated. Additionally, some merchant categories recorded refund amounts that exceeded their total revenue. Therefore, I recommend that the company review the top five merchant categories with the highest refund rates each month to identify recurring operational issues, payment disputes, or merchant specific problems and mitigate future revenue losses.
 
@@ -252,3 +262,10 @@ Overall, E-Wallet still has not seen more average use than Card, but it varies b
 The company should also regularly review transactions with an unknown fraud status. Since these transactions have a higher average transaction amount than legitimate transactions, investigating them may help identify unresolved fraud cases or improve the accuracy of fraud classification.
 
 **4.)** Since e-wallet usage experienced notable growth during the first half of 2026, the company should continue investing in its e wallet infrastructure and promotional initiatives. Encouraging merchants and customers to adopt e wallet payments can capitalize on this growing trend while maintaining support for card payments in countries where they remain the preferred payment method.
+
+#**VI. Key Assumptions & Limitations**
+Exchange rates were converted using modern PHP conversion rates.
+RFM thresholds (100k PHP, 10 transactions, 180 days) were manually defined for this project.
+Duplicate records were removed based on the implemented SQL logic.
+Fraud labels marked as "Unknown" could not be verified against actual outcomes.
+Currency conversion assumes a fixed exchange rate rather than historical daily rates.

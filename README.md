@@ -28,11 +28,11 @@ This project began with a simple question: What can a fintech transaction datase
 
 # **III. Data Cleaning Process**
 
-##**1.) Uploading the dataset**
+## **1.) Uploading the dataset**
 
 I started by importing a messy fintech transaction dataset. I first used a little python in order to scout the columns and ended the whole python process there. I went back to SQL and created the tables with only VARCHAR datatypes in order for it to be uploaded smoothly into SQL.
 
-###<img width="457" height="493" alt="image" src="https://github.com/user-attachments/assets/f26cfd83-1770-4d6f-87b6-66a6a1befefa" />
+### <img width="457" height="493" alt="image" src="https://github.com/user-attachments/assets/f26cfd83-1770-4d6f-87b6-66a6a1befefa" />
 
 This makes it so the messy data won't interfere with the uploading process. To then upload the dataset to SQL, I placed the CSV file into the program data file of MySQL and used LOAD DATA LOCAL INFILE to upload the dataset. 
 

@@ -333,9 +333,9 @@ FROM clean_transactions_php;
 -- Took the average of all types of transactions, the minimum, and the maximum
 SELECT
 	fraud_flag,
-    ROUND(AVG(amount), 2) AS avg_amount,
-	ROUND(MIN(amount), 2) AS min_amount,
-    ROUND(MAX(amount), 2) AS max_amount,
+    ROUND(AVG(amount_php), 2) AS avg_amount,
+	ROUND(MIN(amount_php), 2) AS min_amount,
+    ROUND(MAX(amount_php), 2) AS max_amount,
     COUNT(*) as transaction_id
 FROM clean_transactions_php
 GROUP BY fraud_flag;

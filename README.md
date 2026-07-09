@@ -13,7 +13,7 @@ End to end SQL data cleaning and business analysis of a messy fintech transactio
 
 
 # **I. Introduction**
-Financial technology companies process thousands of digital transactions every day. Hidden within these tranascations are patterns that can help businesses understand customer behavior, identify potential risks, and monitor payment activity to make better business decisions. However, these insights are only valuable if the underlying data is accurate and well prepared.
+Financial technology companies process thousands of digital transactions every day. Hidden within  tranascations are patterns that can help businesses understand customer behavior, identify potential risks, and monitor payment activity to make better business decisions. However, these insights are only valuable if the underlying data is accurate and well prepared.
 
 This project began with a simple question: What can a fintech transaction dataset reveal once it has been cleaned and analyzed? To answer this, I challenged myself to only use SQL in order to clean and standardize the dataset containing digital financial transactions before analyzing and making a report out of it on Power BI. The cleaning process addresses inconsistencies such as mixed date formats, unformatted country names, duplicate transaction records, missing values, and multiple currencies to create a reliable foundation for the analysis.
 
@@ -40,7 +40,7 @@ This makes it so the messy data won't interfere with the uploading process. To t
 
 ## **2.) Keeping the Original Raw Data**
 
-Since I have no prior experience to analysis, I used my knowledge from mentors online to decide how I want to proceed. I initially decided on cleaning the table by updating the raw data itself, but I scrapped that and created a new table to work with and do it from there since we want to keep the original raw data as I was told that in the real workplace, it is a standard practice
+Since I have no prior experience to analysis, I used my knowledge from mentors online to decide how I want to proceed. I initially decided on cleaning the table by updating the raw data itself, but I scrapped that and created a new table to work with and do it from there since we want to keep the original raw data, as I was told that in the real workplace, it is a standard practice.
 
 ### <img width="870" height="317" alt="image" src="https://github.com/user-attachments/assets/2afb972c-3c3a-4344-a05a-90f5cc2b34bb" />
 
@@ -88,7 +88,7 @@ I then created separate columns for year, months, and days by doing the same thi
 
 <img width="72" height="136" alt="image" src="https://github.com/user-attachments/assets/6a788dda-f7b6-4b77-bca2-b55a4321346d" />
 
-SELECT DISTINCT comes into play here by checking categories. I didnt go with TRIM(column_name) in order to see if there are similar variations of one country. Before that, I checked the amount format and it shows a messy format with peso signs and even an N/A cell for missing values so to clean it, I deleted the currency sign, the columns, and the N/A to keep the missing values as null so it doesn't mess up the numbers column.
+SELECT DISTINCT comes into play here by checking categories. I didn't go with TRIM(column_name) in order to see if there are similar variations of one country. Before that, I checked the amount format and it shows a messy format with peso signs and even an N/A cell for missing values so to clean it, I deleted the currency sign, the columns, and the N/A to keep the missing values as null so it doesn't mess up the numbers column.
 
 <img width="707" height="40" alt="image" src="https://github.com/user-attachments/assets/0cfce63b-5931-433a-b9c6-25ced623863d" />
 
@@ -129,7 +129,7 @@ Later on in my analysis, I also realized that it is impossible to come up with a
 
 <img width="746" height="313" alt="image" src="https://github.com/user-attachments/assets/0bc16f01-9621-42e8-b50d-92050b42ba33" />
 
-I did this by creating a new column for the converted amount and miltiplying the original amount by its modern conversion rate into PHP.
+I did this by creating a new column for the converted amount and multiplying the original amount by its current conversion rate into PHP.
 
 # **IV. Business Question Queries**
 
@@ -150,12 +150,6 @@ I did this by creating a new column for the converted amount and miltiplying the
 ### Classification
 
 Since the dataset did not come with factors such as identifying these 3 cases, I took it upon myself to give a sample threshold for how to identify customers who are either high value, dormant, or regular.
-
-**Regulars:** customers who are active but haven't passed the 100k transaction in php and more than 10 transactions
-
-**Dormat:** customers who are inactive for more than 180 days regardless of amount transacted
-
-**High Value:** customers who have been actively transacting for not less more than 30 days, have made 10 transactions or more, and have passed the 100k PHP amount in total transactions.
 
 ### **3.) Fraud Analysis - What transaction characteristics (amount size, payment method, country) correlate with flagged fraud, once fraud_flag is standardized?**
 
@@ -220,9 +214,9 @@ The total revenue counting per merchant category comes at a total of 178.86 Mill
 
 **Regulars:** customers who are active but haven't passed the 100k transaction in php and more than 10 transactions
 
-**Dormat:** customers who are inactive for more than 180 days regardless of amount transacted
+**Dormant:** customers who are inactive for more than 180 days regardless of amount transacted
 
-**High Value:** customers who have been actively transacting for not less more than 30 days, have made 10 transactions or more, and have passed the 100k PHP amount in total transactions.
+**High Value:** customers who have been actively transacting for not more than 30 days, have made 10 transactions or more, and have passed the 100k PHP amount in total transactions.
 
 ### Recency
 

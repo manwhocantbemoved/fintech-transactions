@@ -22,8 +22,11 @@ This project began with a simple question: What can a fintech transaction datase
 # **II. Business Questions**
 
 1.) What's net revenue by month and the total revenue vs refund of merchant categories?
+
 2.) Which customers are high-value vs. dormant (RFM: recency, frequency, monetary)
+
 3.) What transaction characteristics (amount size, payment method, country) correlate with flagged fraud, once fraud_flag is standardized?
+
 4.) How has e-wallet usage shifted vs. cards/bank transfer over time, and does it vary by country?
 
 # **III. Data Cleaning Process**
